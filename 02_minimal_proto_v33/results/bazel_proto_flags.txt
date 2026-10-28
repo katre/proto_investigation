@@ -1,0 +1,20 @@
+  --[no]incompatible_enable_proto_toolchain_resolution (a boolean; default: "true")
+  --[no]incompatible_make_thinlto_command_lines_standalone (a boolean; default: "true")
+--
+  --cc_proto_library_header_suffixes (comma-separated set of options; default: ".pb.h")
+  --cc_proto_library_source_suffixes (comma-separated set of options; default: ".pb.cc")
+  --[no]experimental_proto_descriptor_sets_include_source_info (a boolean; default: "false")
+  --[no]experimental_save_feature_state (a boolean; default: "false")
+--
+  --strict_proto_deps (off, warn, error, strict or default; default: "error")
+  --strict_public_imports (off, warn, error, strict or default; default: "off")
+--
+  --proto_compiler (a build target label; default: "@bazel_tools//tools/proto:protoc")
+  --[no]proto_profile (a boolean; default: "true")
+  --proto_profile_path (a build target label; default: see description)
+  --proto_toolchain_for_cc (a build target label; default: "@bazel_tools//tools/proto:cc_toolchain")
+  --proto_toolchain_for_j2objc (a build target label; default: "@bazel_tools//tools/j2objc:j2objc_proto_toolchain")
+  --proto_toolchain_for_java (a build target label; default: "@bazel_tools//tools/proto:java_toolchain")
+  --proto_toolchain_for_javalite (a build target label; default: "@bazel_tools//tools/proto:javalite_toolchain")
+  --protocopt (a string; may be used multiple times)
+  --[no]runs_per_test_detects_flakes (a boolean; default: "false")

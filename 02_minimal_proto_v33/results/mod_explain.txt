@@ -1,0 +1,56 @@
+### rules_kotlin
+<root> (minimal_proto_v33@_)
+└───protobuf@33.4 
+    ├───rules_jvm_external@6.7 
+    │   └───rules_kotlin@1.9.6 # 
+    └───rules_kotlin@1.9.6 # 
+
+### rules_rust
+(rules_rust is not in the module graph)
+### rules_jvm_external
+<root> (minimal_proto_v33@_)
+├───bazel_tools@_ 
+│   └╌╌╌stardoc@0.7.2 
+│       └───rules_jvm_external@6.7 # 
+└───protobuf@33.4 
+    └───rules_jvm_external@6.7 # 
+
+### rules_python
+<root> (minimal_proto_v33@_)
+├───bazel_tools@_ 
+│   └───rules_python@1.7.0 # 
+└───protobuf@33.4 
+    ├───re2@2024-07-02.bcr.1 
+    │   ├───pybind11_bazel@2.12.0 
+    │   │   └───rules_python@1.7.0 # 
+    │   └───rules_python@1.7.0 # 
+    ├───rules_apple@4.1.0 
+    │   └───rules_python@1.7.0 # 
+    ├───rules_kotlin@1.9.6 
+    │   └───rules_python@1.7.0 # 
+    ├───rules_pkg@1.0.1 
+    │   └───rules_python@1.7.0 # 
+    └───rules_python@1.7.0 # 
+
+### rules_pkg
+<root> (minimal_proto_v33@_)
+└───protobuf@33.4 
+    └───rules_pkg@1.0.1 # 
+
+### rules_apple
+<root> (minimal_proto_v33@_)
+└───protobuf@33.4 
+    └───rules_apple@4.1.0 # 
+
+### jsoncpp
+<root> (minimal_proto_v33@_)
+└───protobuf@33.4 
+    └───jsoncpp@1.9.6 # 
+
+### re2
+<root> (minimal_proto_v33@_)
+└───protobuf@33.4 
+    ├───re2@2024-07-02.bcr.1 # 
+    └╌╌╌googletest@1.17.0 
+        └───re2@2024-07-02.bcr.1 # 
+

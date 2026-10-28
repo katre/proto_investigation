@@ -1,0 +1,191 @@
+<root> (minimal_proto_v33@_)
+├───bazel_tools@_ 
+│   ├───$@@bazel_tools//:MODULE.bazel%//tools/res:winsdk_configure.bzl winsdk_configure 
+│   ├───$@@bazel_tools//tools/osx:xcode_configure.bzl%xcode_configure_extension 
+│   ├───$@@bazel_tools//tools/test:extensions.bzl%remote_coverage_tools_extension 
+│   ├───$@@buildozer+//:buildozer_binary.bzl%buildozer_binary 
+│   ├───$@@rules_java+//java:extensions.bzl%toolchains 
+│   ├───protobuf@33.4 (*) 
+│   ├───rules_cc@0.2.17 (*) 
+│   ├───rules_java@9.1.0 (*) 
+│   ├───apple_support@2.5.2 
+│   │   ├───$@@apple_support+//crosstool:setup.bzl%apple_cc_configure_extension 
+│   │   ├───bazel_tools@_ (cycle) 
+│   │   ├───bazel_features@1.42.1 (*) 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   └───rules_cc@0.2.17 (*) 
+│   ├───buildozer@8.5.1 
+│   │   ├───$@@buildozer+//:buildozer_binary.bzl%buildozer_binary 
+│   │   ├───bazel_tools@_ (cycle) 
+│   │   ├───bazel_features@1.42.1 (*) 
+│   │   └───rules_shell@0.6.1 (*) 
+│   ├───platforms@1.0.0 
+│   │   ├───$@@platforms//host:extension.bzl%host_platform 
+│   │   ├───bazel_tools@_ (cycle) 
+│   │   └───rules_license@1.0.0 (*) 
+│   ├───rules_license@1.0.0 
+│   │   └───bazel_tools@_ (cycle) 
+│   ├───rules_python@1.7.0 
+│   │   ├───$@@rules_python+//python/extensions:config.bzl%config 
+│   │   ├───$@@rules_python+//python/extensions:pip.bzl%pip 
+│   │   ├───$@@rules_python+//python/extensions:python.bzl%python 
+│   │   ├───$@@rules_python+//python/uv:uv.bzl%uv 
+│   │   ├───bazel_tools@_ (cycle) 
+│   │   ├───bazel_features@1.42.1 (*) 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   ├───protobuf@33.4 (*) 
+│   │   ├───rules_cc@0.2.17 (*) 
+│   │   └───stardoc@0.7.2 
+│   │       ├───$@@rules_jvm_external+//:extensions.bzl%maven 
+│   │       ├───bazel_tools@_ (cycle) 
+│   │       ├───bazel_skylib@1.8.2 (*) 
+│   │       ├───protobuf@33.4 (*) 
+│   │       ├───rules_java@9.1.0 (*) 
+│   │       ├───rules_jvm_external@6.7 (*) 
+│   │       └───rules_license@1.0.0 (*) 
+│   ├───rules_shell@0.6.1 
+│   │   ├───$@@rules_shell+//shell/private/extensions:sh_configure.bzl%sh_configure 
+│   │   ├───bazel_tools@_ (cycle) 
+│   │   ├───bazel_features@1.42.1 (*) 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   └───platforms@1.0.0 (*) 
+│   └───zlib@1.3.1.bcr.5 
+│       ├───bazel_tools@_ (cycle) 
+│       ├───platforms@1.0.0 (*) 
+│       ├───rules_cc@0.2.17 (*) 
+│       └───rules_license@1.0.0 (*) 
+├───protobuf@33.4 
+│   ├───$@@protobuf+//bazel/private:prebuilt_protoc_extension.bzl%protoc 
+│   ├───$@@rules_cc+//cc:extensions.bzl%cc_configure_extension 
+│   ├───$@@rules_jvm_external+//:extensions.bzl%maven 
+│   ├───apple_support@2.5.2 (*) 
+│   ├───bazel_tools@_ (*) 
+│   ├───platforms@1.0.0 (*) 
+│   ├───rules_cc@0.2.17 (*) 
+│   ├───rules_java@9.1.0 (*) 
+│   ├───rules_license@1.0.0 (*) 
+│   ├───rules_python@1.7.0 (*) 
+│   ├───rules_shell@0.6.1 (*) 
+│   ├───zlib@1.3.1.bcr.5 (*) 
+│   ├───abseil-cpp@20250814.1 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   ├───bazel_tools@_ (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   ├───rules_cc@0.2.17 (*) 
+│   │   └───googletest@1.17.0 
+│   │       ├───$@@googletest+//:fake_fuchsia_sdk.bzl%fuchsia_sdk 
+│   │       ├───abseil-cpp@20250814.1 (cycle) 
+│   │       ├───bazel_tools@_ (*) 
+│   │       ├───platforms@1.0.0 (*) 
+│   │       └───re2@2024-07-02.bcr.1 (*) 
+│   ├───bazel_features@1.42.1 
+│   │   ├───$@@bazel_features+//private:extensions.bzl%version_extension 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   └───bazel_tools@_ (*) 
+│   ├───bazel_skylib@1.8.2 
+│   │   ├───bazel_tools@_ (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   └───rules_license@1.0.0 (*) 
+│   ├───jsoncpp@1.9.6 
+│   │   └───bazel_tools@_ (*) 
+│   ├───re2@2024-07-02.bcr.1 
+│   │   ├───abseil-cpp@20250814.1 (*) 
+│   │   ├───apple_support@2.5.2 (*) 
+│   │   ├───bazel_tools@_ (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   ├───rules_cc@0.2.17 (*) 
+│   │   ├───rules_python@1.7.0 (*) 
+│   │   └───pybind11_bazel@2.12.0 
+│   │       ├───$@@pybind11_bazel+//:internal_configure.bzl%internal_configure_extension 
+│   │       ├───bazel_skylib@1.8.2 (*) 
+│   │       ├───bazel_tools@_ (*) 
+│   │       ├───platforms@1.0.0 (*) 
+│   │       ├───rules_cc@0.2.17 (*) 
+│   │       └───rules_python@1.7.0 (*) 
+│   ├───rules_apple@4.1.0 
+│   │   ├───$@@apple_support+//crosstool:setup.bzl%apple_cc_configure_extension 
+│   │   ├───$@@rules_apple+//apple:apple.bzl%provisioning_profile_repository_extension 
+│   │   ├───$@@rules_apple+//apple:extensions.bzl%non_module_deps 
+│   │   ├───apple_support@2.5.2 (*) 
+│   │   ├───bazel_features@1.42.1 (*) 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   ├───bazel_tools@_ (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   ├───rules_cc@0.2.17 (*) 
+│   │   ├───rules_python@1.7.0 (*) 
+│   │   ├───rules_shell@0.6.1 (*) 
+│   │   └───rules_swift@3.1.2 
+│   │       ├───$@@apple_support+//crosstool:setup.bzl%apple_cc_configure_extension 
+│   │       ├───$@@rules_swift+//swift:extensions.bzl%non_module_deps 
+│   │       ├───protobuf@33.4 (cycle) 
+│   │       ├───apple_support@2.5.2 (*) 
+│   │       ├───bazel_features@1.42.1 (*) 
+│   │       ├───bazel_skylib@1.8.2 (*) 
+│   │       ├───bazel_tools@_ (*) 
+│   │       ├───platforms@1.0.0 (*) 
+│   │       ├───rules_cc@0.2.17 (*) 
+│   │       ├───rules_shell@0.6.1 (*) 
+│   │       ├───nlohmann_json@3.6.1 
+│   │       │   └───bazel_tools@_ (*) 
+│   │       └───swift_argument_parser@1.3.1.2 
+│   │           ├───rules_swift@3.1.2 (cycle) 
+│   │           ├───apple_support@2.5.2 (*) 
+│   │           └───bazel_tools@_ (*) 
+│   ├───rules_jvm_external@6.7 
+│   │   ├───$@@bazel_tools//tools/android:android_extensions.bzl%remote_android_tools_extensions 
+│   │   ├───$@@rules_jvm_external+//:MODULE.bazel%@bazel_tools//tools/build_defs/repo:http.bzl http_file 
+│   │   ├───$@@rules_jvm_external+//:extensions.bzl%maven 
+│   │   ├───bazel_features@1.42.1 (*) 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   ├───bazel_tools@_ (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   ├───rules_java@9.1.0 (*) 
+│   │   ├───rules_kotlin@1.9.6 (*) 
+│   │   ├───rules_license@1.0.0 (*) 
+│   │   ├───rules_shell@0.6.1 (*) 
+│   │   └───rules_android@0.1.1 
+│   │       └───bazel_tools@_ (*) 
+│   ├───rules_kotlin@1.9.6 
+│   │   ├───$@@bazel_tools//tools/android:android_extensions.bzl%remote_android_tools_extensions 
+│   │   ├───$@@rules_kotlin+//src/main/starlark/core/repositories:bzlmod_setup.bzl%rules_kotlin_extensions 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   ├───bazel_tools@_ (*) 
+│   │   ├───platforms@1.0.0 (*) 
+│   │   ├───rules_cc@0.2.17 (*) 
+│   │   ├───rules_java@9.1.0 (*) 
+│   │   ├───rules_proto@7.1.0 (*) 
+│   │   └───rules_python@1.7.0 (*) 
+│   ├───rules_pkg@1.0.1 
+│   │   ├───bazel_skylib@1.8.2 (*) 
+│   │   ├───bazel_tools@_ (*) 
+│   │   ├───rules_license@1.0.0 (*) 
+│   │   └───rules_python@1.7.0 (*) 
+│   └───rules_proto@7.1.0 
+│       ├───protobuf@33.4 (cycle) 
+│       ├───bazel_skylib@1.8.2 (*) 
+│       ├───bazel_tools@_ (*) 
+│       ├───rules_cc@0.2.17 (*) 
+│       └───rules_license@1.0.0 (*) 
+├───rules_cc@0.2.17 
+│   ├───$@@rules_cc+//cc:extensions.bzl%cc_configure_extension 
+│   ├───$@@rules_cc+//cc:extensions.bzl%compatibility_proxy 
+│   ├───bazel_features@1.42.1 (*) 
+│   ├───bazel_skylib@1.8.2 (*) 
+│   ├───bazel_tools@_ (*) 
+│   ├───platforms@1.0.0 (*) 
+│   └───protobuf@33.4 (*) 
+└───rules_java@9.1.0 
+    ├───$@@rules_java+//java:extensions.bzl%toolchains 
+    ├───$@@rules_java+//java:rules_java_deps.bzl%compatibility_proxy 
+    ├───abseil-cpp@20250814.1 (*) 
+    ├───bazel_features@1.42.1 (*) 
+    ├───bazel_skylib@1.8.2 (*) 
+    ├───bazel_tools@_ (*) 
+    ├───platforms@1.0.0 (*) 
+    ├───protobuf@33.4 (*) 
+    ├───rules_cc@0.2.17 (*) 
+    ├───rules_license@1.0.0 (*) 
+    └───zlib@1.3.1.bcr.5 (*) 
+

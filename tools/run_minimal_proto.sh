@@ -43,15 +43,20 @@ done
 # 5. Confirmation: protobuf with bazel/private/native.bzl reading
 #    proto_common_do_not_use (as protobuf <= 36.x did) instead of
 #    native.proto_common. Uses a patched copy of the fetched protobuf repo.
+#    Skipped for versions that already use proto_common_do_not_use.
 OUTPUT_BASE_DIR="$("${B[@]}" info output_base 2>/dev/null)"
-PATCHED="${OUTPUT_BASE}-patched-protobuf"
-rm -rf "$PATCHED"
-cp -rL "${OUTPUT_BASE_DIR}/external/protobuf+" "$PATCHED"
-sed -i 's|^native_proto_common = .*|native_proto_common = proto_common_do_not_use|' "$PATCHED/bazel/private/native.bzl"
-grep -n '^native_proto_common' "$PATCHED/bazel/private/native.bzl" > "$R/patched_native_bzl.txt"
-for t in greeting_proto greeting_cc_proto greeting_java_proto; do
-  aquery "${t}_patched_native_bzl" "$t" "--override_module=protobuf=${PATCHED}"
-done
+if grep -q 'getattr(native, "proto_common"' "${OUTPUT_BASE_DIR}/external/protobuf+/bazel/private/native.bzl"; then
+  PATCHED="${OUTPUT_BASE}-patched-protobuf"
+  rm -rf "$PATCHED"
+  cp -rL "${OUTPUT_BASE_DIR}/external/protobuf+" "$PATCHED"
+  sed -i 's|^native_proto_common = .*|native_proto_common = proto_common_do_not_use|' "$PATCHED/bazel/private/native.bzl"
+  grep -n '^native_proto_common' "$PATCHED/bazel/private/native.bzl" > "$R/patched_native_bzl.txt"
+  for t in greeting_proto greeting_cc_proto greeting_java_proto; do
+    aquery "${t}_patched_native_bzl" "$t" "--override_module=protobuf=${PATCHED}"
+  done
+else
+  grep -n '^native_proto_common' "${OUTPUT_BASE_DIR}/external/protobuf+/bazel/private/native.bzl" > "$R/native_bzl.txt"
+fi
 
 # 6. Module graph (separate output base, see common.sh).
 "${B_MOD[@]}" mod graph > "$R/mod_graph.txt" 2>/dev/null
