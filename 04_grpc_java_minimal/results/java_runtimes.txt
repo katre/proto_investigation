@@ -1,0 +1,22 @@
+### jars in the runfiles of //proto:greeter_java_bin (JDK jars omitted)
+../grpc-java+/api/libapi.jar
+../grpc-java+/protobuf-lite/libprotobuf-lite.jar
+../grpc-java+/protobuf/libprotobuf.jar
+../grpc-java+/stub/libstub.jar
+../protobuf+/java/core/libcore.jar
+../protobuf+/java/core/liblite_runtime_only.jar
+../rules_jvm_external++maven+maven/com/google/api/grpc/proto-google-common-protos/2.29.0/processed_proto-google-common-protos-2.29.0.jar
+../rules_jvm_external++maven+maven/com/google/code/findbugs/jsr305/3.0.2/processed_jsr305-3.0.2.jar
+../rules_jvm_external++maven+maven/com/google/errorprone/error_prone_annotations/2.28.0/processed_error_prone_annotations-2.28.0.jar
+../rules_jvm_external++maven+maven/com/google/guava/failureaccess/1.0.2/processed_failureaccess-1.0.2.jar
+../rules_jvm_external++maven+maven/com/google/guava/guava/33.2.1-android/processed_guava-33.2.1-android.jar
+../rules_jvm_external++maven+maven/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/processed_listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+../rules_jvm_external++maven+maven/com/google/j2objc/j2objc-annotations/3.0.0/processed_j2objc-annotations-3.0.0.jar
+../rules_jvm_external++maven+maven/org/checkerframework/checker-qual/3.42.0/processed_checker-qual-3.42.0.jar
+../rules_jvm_external++maven+maven/org/codehaus/mojo/animal-sniffer-annotations/1.24/processed_animal-sniffer-annotations-1.24.jar
+proto/greeter_java_bin.jar
+proto/libgreeter_java_grpc.jar
+proto/libgreeter_proto-speed.jar
+
+### Maven targets in deps(//proto:greeter_java_bin) matching 'protobuf'
+(end)

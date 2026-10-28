@@ -1,0 +1,102 @@
+### grpc-java
+<root> (grpc_java_minimal@_)
+└───grpc-java@1.71.0 # 
+
+### protobuf
+<root> (grpc_java_minimal@_)
+├───bazel_tools@_ 
+│   ├───protobuf@37.0-rc1 # 
+│   ├───rules_cc@0.2.18 
+│   │   └───protobuf@37.0-rc1 # 
+│   └───rules_python@2.3.0 
+│       └───protobuf@37.0-rc1 # 
+├───grpc-java@1.71.0 
+│   ├───cel-spec@0.15.0 
+│   │   ├───gazelle@0.47.0 
+│   │   │   └───protobuf@37.0-rc1 # 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───envoy_api@0.0.0-20241214-918efc9 
+│   │   ├───opentelemetry-proto@1.4.0.bcr.1 
+│   │   │   └───protobuf@37.0-rc1 # 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───googleapis@0.0.0-20240819-fe8ba054a 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───grpc@1.69.0 
+│   │   ├───opencensus-cpp@0.0.0-20230502-50eb5de 
+│   │   │   └───protobuf@37.0-rc1 # 
+│   │   ├───opentelemetry-cpp@1.16.0 
+│   │   │   └───protobuf@37.0-rc1 # 
+│   │   ├───protobuf@37.0-rc1 # 
+│   │   └╌╌╌rules_swift@3.1.2 
+│   │       └───protobuf@37.0-rc1 # 
+│   ├───grpc-proto@0.0.0-20240627-ec30f58 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───opencensus-proto@0.4.1 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───protobuf@37.0-rc1 # 
+│   ├───protoc-gen-validate@1.0.4.bcr.2 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───rules_go@0.59.0 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───rules_proto@7.1.0 
+│   │   └───protobuf@37.0-rc1 # 
+│   ├───xds@0.0.0-20240423-555b57e 
+│   │   └───protobuf@37.0-rc1 # 
+│   └╌╌╌rules_android@0.7.1 
+│       ├───bazel_worker_api@0.0.8 
+│       │   └───protobuf@37.0-rc1 # 
+│       ├───bazel_worker_java@0.0.8 
+│       │   └───protobuf@37.0-rc1 # 
+│       └───protobuf@37.0-rc1 # 
+├───protobuf@37.0-rc1 # 
+└───rules_java@9.3.0 
+    └───protobuf@37.0-rc1 # 
+
+### grpc
+<root> (grpc_java_minimal@_)
+└───grpc-java@1.71.0 
+    ├───envoy_api@0.0.0-20241214-918efc9 
+    │   ├───grpc@1.69.0 # 
+    │   └───opentelemetry-proto@1.4.0.bcr.1 
+    │       └───grpc@1.69.0 # 
+    ├───googleapis@0.0.0-20240819-fe8ba054a 
+    │   └───grpc@1.69.0 # 
+    ├───grpc@1.69.0 # 
+    ├───opencensus-proto@0.4.1 
+    │   └───grpc@1.69.0 # 
+    └───xds@0.0.0-20240423-555b57e 
+        └───grpc@1.69.0 # 
+
+### envoy_api
+<root> (grpc_java_minimal@_)
+└───grpc-java@1.71.0 
+    ├───envoy_api@0.0.0-20241214-918efc9 # 
+    └───grpc@1.69.0 
+        └───envoy_api@0.0.0-20241214-918efc9 # 
+
+### googleapis
+<root> (grpc_java_minimal@_)
+└───grpc-java@1.71.0 
+    ├───envoy_api@0.0.0-20241214-918efc9 
+    │   └───googleapis@0.0.0-20240819-fe8ba054a # 
+    ├───googleapis@0.0.0-20240819-fe8ba054a # 
+    ├───grpc@1.69.0 
+    │   ├───googleapis@0.0.0-20240819-fe8ba054a # 
+    │   └───opencensus-cpp@0.0.0-20230502-50eb5de 
+    │       └───googleapis@0.0.0-20240819-fe8ba054a # 
+    ├───grpc-proto@0.0.0-20240627-ec30f58 
+    │   └───googleapis@0.0.0-20240819-fe8ba054a # 
+    └───xds@0.0.0-20240423-555b57e 
+        └───googleapis@0.0.0-20240819-fe8ba054a # 
+
+### rules_foreign_cc
+(rules_foreign_cc is not in the module graph)
+### google_benchmark
+<root> (grpc_java_minimal@_)
+├───google_benchmark@1.9.4 # 
+└───grpc-java@1.71.0 
+    └───grpc@1.69.0 
+        ├───google_benchmark@1.9.4 # 
+        └───opencensus-cpp@0.0.0-20230502-50eb5de 
+            └───google_benchmark@1.9.4 # 
+

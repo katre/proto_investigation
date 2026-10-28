@@ -1,0 +1,38 @@
+9a10
+> boringssl@0.20241024.0
+10a12,17
+> c-ares@1.15.0
+> cel-spec@0.15.0
+> civetweb@1.16
+> curl@8.7.1
+> cython@3.0.11-1
+> envoy_api@0.0.0-20241214-918efc9
+11a19,20
+> google_benchmark@1.9.4
+> googleapis@0.0.0-20240819-fe8ba054a
+12a22,24
+> grpc-java@1.71.0
+> grpc-proto@0.0.0-20240627-ec30f58
+> grpc@1.69.0
+13a26,33
+> libpfm@4.11.0.bcr.1
+> mbedtls@3.6.0
+> nlohmann_json@3.11.3
+> opencensus-cpp@0.0.0-20230502-50eb5de
+> opencensus-proto@0.4.1
+> opentelemetry-cpp@1.16.0
+> opentelemetry-proto@1.4.0.bcr.1
+> opentracing-cpp@1.6.0
+15a36
+> prometheus-cpp@1.3.0
+16a38
+> protoc-gen-validate@1.0.4.bcr.2
+17a40
+> rapidjson@1.1.0.bcr.20241007
+19a43
+> rules_apple@4.1.0
+31a56,57
+> rules_swift@3.1.2
+> swift_argument_parser@1.3.1.2
+32a59
+> xds@0.0.0-20240423-555b57e

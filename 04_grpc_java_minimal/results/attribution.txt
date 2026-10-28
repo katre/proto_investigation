@@ -1,0 +1,23 @@
+### somepath(//proto:greeter_java_grpc, @protobuf//:protoc)
+//proto:greeter_java_grpc (919ba8e)
+@grpc-java//compiler:java_grpc_library_toolchain (919ba8e)
+@protobuf//:protoc (fa6a2d1)
+
+### somepath(//proto:greeter_java_grpc, @protobuf//:protoc_lib)
+//proto:greeter_java_grpc (919ba8e)
+@grpc-java//compiler:java_grpc_library_toolchain (919ba8e)
+@grpc-java//compiler:grpc_java_plugin (fa6a2d1)
+@protobuf//:protoc_lib (fa6a2d1)
+
+### somepath(//proto:greeter_java_grpc, @grpc-java//compiler:grpc_java_plugin)
+//proto:greeter_java_grpc (919ba8e)
+@grpc-java//compiler:java_grpc_library_toolchain (919ba8e)
+@grpc-java//compiler:grpc_java_plugin (fa6a2d1)
+
+### allpaths(//proto:greeter_java_grpc, @protobuf//:protoc) (patched native.bzl)
+@protobuf//:protoc (fa6a2d1)
+@grpc-java//compiler:java_grpc_library_toolchain (919ba8e)
+//proto:greeter_java_grpc (919ba8e)
+
+### grpc C++ (@grpc) targets in deps(//proto:greeter_java_bin)
+(end)

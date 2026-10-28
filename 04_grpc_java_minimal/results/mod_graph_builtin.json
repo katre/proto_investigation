@@ -1,0 +1,2965 @@
+{
+  "key": "<root>",
+  "name": "grpc_java_minimal",
+  "version": "",
+  "apparentName": "grpc_java_minimal",
+  "dependencies": [
+    {
+      "key": "bazel_tools@_",
+      "name": "bazel_tools",
+      "version": "",
+      "apparentName": "bazel_tools",
+      "dependencies": [
+        {
+          "key": "protobuf@37.0-rc1",
+          "name": "protobuf",
+          "version": "37.0-rc1",
+          "apparentName": "com_google_protobuf",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_java@9.3.0",
+          "name": "rules_java",
+          "version": "9.3.0",
+          "apparentName": "rules_java",
+          "unexpanded": true
+        },
+        {
+          "key": "apple_support@2.5.2",
+          "name": "apple_support",
+          "version": "2.5.2",
+          "apparentName": "apple_support",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "buildozer@8.5.1",
+          "name": "buildozer",
+          "version": "8.5.1",
+          "apparentName": "buildozer",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_shell@0.6.1",
+              "name": "rules_shell",
+              "version": "0.6.1",
+              "apparentName": "rules_shell",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "platforms@1.0.0",
+          "name": "platforms",
+          "version": "1.0.0",
+          "apparentName": "platforms",
+          "dependencies": [
+            {
+              "key": "rules_license@1.0.0",
+              "name": "rules_license",
+              "version": "1.0.0",
+              "apparentName": "rules_license",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "rules_cc@0.2.18",
+          "name": "rules_cc",
+          "version": "0.2.18",
+          "apparentName": "rules_cc",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "rules_license@1.0.0",
+          "name": "rules_license",
+          "version": "1.0.0",
+          "apparentName": "rules_license",
+          "dependencies": [],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "rules_python@2.3.0",
+          "name": "rules_python",
+          "version": "2.3.0",
+          "apparentName": "rules_python",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "package_metadata@0.0.7",
+              "name": "package_metadata",
+              "version": "0.0.7",
+              "apparentName": "package_metadata",
+              "dependencies": [],
+              "indirectDependencies": [],
+              "cycles": [
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                }
+              ]
+            },
+            {
+              "key": "toml.bzl@0.4.1",
+              "name": "toml.bzl",
+              "version": "0.4.1",
+              "apparentName": "toml.bzl",
+              "dependencies": [
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "package_metadata@0.0.7",
+                  "name": "package_metadata",
+                  "version": "0.0.7",
+                  "apparentName": "package_metadata",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": [
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                }
+              ]
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "rules_shell@0.6.1",
+          "name": "rules_shell",
+          "version": "0.6.1",
+          "apparentName": "rules_shell",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "zlib@1.3.1.bcr.5",
+          "name": "zlib",
+          "version": "1.3.1.bcr.5",
+          "apparentName": "zlib",
+          "dependencies": [
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_license@1.0.0",
+              "name": "rules_license",
+              "version": "1.0.0",
+              "apparentName": "rules_license",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ]
+        }
+      ],
+      "indirectDependencies": [],
+      "cycles": []
+    },
+    {
+      "key": "google_benchmark@1.9.4",
+      "name": "google_benchmark",
+      "version": "1.9.4",
+      "apparentName": "google_benchmark",
+      "dependencies": [
+        {
+          "key": "bazel_tools@_",
+          "name": "bazel_tools",
+          "version": "",
+          "apparentName": "bazel_tools",
+          "unexpanded": true
+        },
+        {
+          "key": "platforms@1.0.0",
+          "name": "platforms",
+          "version": "1.0.0",
+          "apparentName": "platforms",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_cc@0.2.18",
+          "name": "rules_cc",
+          "version": "0.2.18",
+          "apparentName": "rules_cc",
+          "unexpanded": true
+        },
+        {
+          "key": "bazel_skylib@1.9.0",
+          "name": "bazel_skylib",
+          "version": "1.9.0",
+          "apparentName": "bazel_skylib",
+          "dependencies": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_license@1.0.0",
+              "name": "rules_license",
+              "version": "1.0.0",
+              "apparentName": "rules_license",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "libpfm@4.11.0.bcr.1",
+          "name": "libpfm",
+          "version": "4.11.0.bcr.1",
+          "apparentName": "libpfm",
+          "dependencies": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        }
+      ],
+      "indirectDependencies": [],
+      "cycles": []
+    },
+    {
+      "key": "grpc-java@1.71.0",
+      "name": "grpc-java",
+      "version": "1.71.0",
+      "apparentName": "grpc-java",
+      "dependencies": [
+        {
+          "key": "bazel_skylib@1.9.0",
+          "name": "bazel_skylib",
+          "version": "1.9.0",
+          "apparentName": "bazel_skylib",
+          "unexpanded": true
+        },
+        {
+          "key": "bazel_tools@_",
+          "name": "bazel_tools",
+          "version": "",
+          "apparentName": "bazel_tools",
+          "unexpanded": true
+        },
+        {
+          "key": "protobuf@37.0-rc1",
+          "name": "protobuf",
+          "version": "37.0-rc1",
+          "apparentName": "com_google_protobuf",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_cc@0.2.18",
+          "name": "rules_cc",
+          "version": "0.2.18",
+          "apparentName": "rules_cc",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_java@9.3.0",
+          "name": "rules_java",
+          "version": "9.3.0",
+          "apparentName": "rules_java",
+          "unexpanded": true
+        },
+        {
+          "key": "cel-spec@0.15.0",
+          "name": "cel-spec",
+          "version": "0.15.0",
+          "apparentName": "dev_cel",
+          "dependencies": [
+            {
+              "key": "abseil-cpp@20250814.1",
+              "name": "abseil-cpp",
+              "version": "20250814.1",
+              "apparentName": "com_google_absl",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_go@0.59.0",
+              "name": "rules_go",
+              "version": "0.59.0",
+              "apparentName": "io_bazel_rules_go",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_java@9.3.0",
+              "name": "rules_java",
+              "version": "9.3.0",
+              "apparentName": "rules_java",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_pkg@1.0.1",
+              "name": "rules_pkg",
+              "version": "1.0.1",
+              "apparentName": "rules_pkg",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_python@2.3.0",
+              "name": "rules_python",
+              "version": "2.3.0",
+              "apparentName": "rules_python",
+              "unexpanded": true
+            },
+            {
+              "key": "gazelle@0.47.0",
+              "name": "gazelle",
+              "version": "0.47.0",
+              "apparentName": "bazel_gazelle",
+              "dependencies": [
+                {
+                  "key": "bazel_features@1.43.0",
+                  "name": "bazel_features",
+                  "version": "1.43.0",
+                  "apparentName": "bazel_features",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "package_metadata@0.0.7",
+                  "name": "package_metadata",
+                  "version": "0.0.7",
+                  "apparentName": "package_metadata",
+                  "unexpanded": true
+                },
+                {
+                  "key": "protobuf@37.0-rc1",
+                  "name": "protobuf",
+                  "version": "37.0-rc1",
+                  "apparentName": "com_google_protobuf",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_cc@0.2.18",
+                  "name": "rules_cc",
+                  "version": "0.2.18",
+                  "apparentName": "rules_cc",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_go@0.59.0",
+                  "name": "rules_go",
+                  "version": "0.59.0",
+                  "apparentName": "io_bazel_rules_go",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_license@1.0.0",
+                  "name": "rules_license",
+                  "version": "1.0.0",
+                  "apparentName": "rules_license",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_proto@7.1.0",
+                  "name": "rules_proto",
+                  "version": "7.1.0",
+                  "apparentName": "rules_proto",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_shell@0.6.1",
+                  "name": "rules_shell",
+                  "version": "0.6.1",
+                  "apparentName": "rules_shell",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "envoy_api@0.0.0-20241214-918efc9",
+          "name": "envoy_api",
+          "version": "0.0.0-20241214-918efc9",
+          "apparentName": "envoy_api",
+          "dependencies": [
+            {
+              "key": "abseil-cpp@20250814.1",
+              "name": "abseil-cpp",
+              "version": "20250814.1",
+              "apparentName": "com_google_absl",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "gazelle@0.47.0",
+              "name": "gazelle",
+              "version": "0.47.0",
+              "apparentName": "bazel_gazelle",
+              "unexpanded": true
+            },
+            {
+              "key": "googleapis@0.0.0-20240819-fe8ba054a",
+              "name": "googleapis",
+              "version": "0.0.0-20240819-fe8ba054a",
+              "apparentName": "com_google_googleapis",
+              "unexpanded": true
+            },
+            {
+              "key": "grpc@1.69.0",
+              "name": "grpc",
+              "version": "1.69.0",
+              "apparentName": "com_github_grpc_grpc",
+              "unexpanded": true
+            },
+            {
+              "key": "opencensus-proto@0.4.1",
+              "name": "opencensus-proto",
+              "version": "0.4.1",
+              "apparentName": "opencensus_proto",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "protoc-gen-validate@1.0.4.bcr.2",
+              "name": "protoc-gen-validate",
+              "version": "1.0.4.bcr.2",
+              "apparentName": "com_envoyproxy_protoc_gen_validate",
+              "unexpanded": true
+            },
+            {
+              "key": "re2@2024-07-02.bcr.1",
+              "name": "re2",
+              "version": "2024-07-02.bcr.1",
+              "apparentName": "com_googlesource_code_re2",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_go@0.59.0",
+              "name": "rules_go",
+              "version": "0.59.0",
+              "apparentName": "io_bazel_rules_go",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_python@2.3.0",
+              "name": "rules_python",
+              "version": "2.3.0",
+              "apparentName": "rules_python",
+              "unexpanded": true
+            },
+            {
+              "key": "xds@0.0.0-20240423-555b57e",
+              "name": "xds",
+              "version": "0.0.0-20240423-555b57e",
+              "apparentName": "com_github_cncf_xds",
+              "unexpanded": true
+            },
+            {
+              "key": "googletest@1.17.0",
+              "name": "googletest",
+              "version": "1.17.0",
+              "apparentName": "com_google_googletest",
+              "dependencies": [
+                {
+                  "key": "abseil-cpp@20250814.1",
+                  "name": "abseil-cpp",
+                  "version": "20250814.1",
+                  "apparentName": "abseil-cpp",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                },
+                {
+                  "key": "re2@2024-07-02.bcr.1",
+                  "name": "re2",
+                  "version": "2024-07-02.bcr.1",
+                  "apparentName": "re2",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            },
+            {
+              "key": "opentelemetry-proto@1.4.0.bcr.1",
+              "name": "opentelemetry-proto",
+              "version": "1.4.0.bcr.1",
+              "apparentName": "opentelemetry_proto",
+              "dependencies": [
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "grpc@1.69.0",
+                  "name": "grpc",
+                  "version": "1.69.0",
+                  "apparentName": "com_github_grpc_grpc",
+                  "unexpanded": true
+                },
+                {
+                  "key": "protobuf@37.0-rc1",
+                  "name": "protobuf",
+                  "version": "37.0-rc1",
+                  "apparentName": "com_google_protobuf",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_go@0.59.0",
+                  "name": "rules_go",
+                  "version": "0.59.0",
+                  "apparentName": "io_bazel_rules_go",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_proto@7.1.0",
+                  "name": "rules_proto",
+                  "version": "7.1.0",
+                  "apparentName": "rules_proto",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_python@2.3.0",
+                  "name": "rules_python",
+                  "version": "2.3.0",
+                  "apparentName": "rules_python",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "googleapis@0.0.0-20240819-fe8ba054a",
+          "name": "googleapis",
+          "version": "0.0.0-20240819-fe8ba054a",
+          "apparentName": "com_google_googleapis",
+          "dependencies": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "grpc@1.69.0",
+              "name": "grpc",
+              "version": "1.69.0",
+              "apparentName": "com_github_grpc_grpc",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_go@0.59.0",
+              "name": "rules_go",
+              "version": "0.59.0",
+              "apparentName": "io_bazel_rules_go",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_python@2.3.0",
+              "name": "rules_python",
+              "version": "2.3.0",
+              "apparentName": "rules_python",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "grpc-java@1.71.0",
+              "name": "grpc-java",
+              "version": "1.71.0",
+              "apparentName": "io_grpc_grpc_java",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "grpc@1.69.0",
+          "name": "grpc",
+          "version": "1.69.0",
+          "apparentName": "com_github_grpc_grpc",
+          "dependencies": [
+            {
+              "key": "abseil-cpp@20250814.1",
+              "name": "abseil-cpp",
+              "version": "20250814.1",
+              "apparentName": "com_google_absl",
+              "unexpanded": true
+            },
+            {
+              "key": "apple_support@2.5.2",
+              "name": "apple_support",
+              "version": "2.5.2",
+              "apparentName": "build_bazel_apple_support",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "envoy_api@0.0.0-20241214-918efc9",
+              "name": "envoy_api",
+              "version": "0.0.0-20241214-918efc9",
+              "apparentName": "envoy_api",
+              "unexpanded": true
+            },
+            {
+              "key": "google_benchmark@1.9.4",
+              "name": "google_benchmark",
+              "version": "1.9.4",
+              "apparentName": "com_github_google_benchmark",
+              "unexpanded": true
+            },
+            {
+              "key": "googleapis@0.0.0-20240819-fe8ba054a",
+              "name": "googleapis",
+              "version": "0.0.0-20240819-fe8ba054a",
+              "apparentName": "com_google_googleapis",
+              "unexpanded": true
+            },
+            {
+              "key": "googletest@1.17.0",
+              "name": "googletest",
+              "version": "1.17.0",
+              "apparentName": "com_google_googletest",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "protoc-gen-validate@1.0.4.bcr.2",
+              "name": "protoc-gen-validate",
+              "version": "1.0.4.bcr.2",
+              "apparentName": "com_envoyproxy_protoc_gen_validate",
+              "unexpanded": true
+            },
+            {
+              "key": "re2@2024-07-02.bcr.1",
+              "name": "re2",
+              "version": "2024-07-02.bcr.1",
+              "apparentName": "com_googlesource_code_re2",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_java@9.3.0",
+              "name": "rules_java",
+              "version": "9.3.0",
+              "apparentName": "rules_java",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_python@2.3.0",
+              "name": "rules_python",
+              "version": "2.3.0",
+              "apparentName": "rules_python",
+              "unexpanded": true
+            },
+            {
+              "key": "xds@0.0.0-20240423-555b57e",
+              "name": "xds",
+              "version": "0.0.0-20240423-555b57e",
+              "apparentName": "com_github_cncf_xds",
+              "unexpanded": true
+            },
+            {
+              "key": "zlib@1.3.1.bcr.5",
+              "name": "zlib",
+              "version": "1.3.1.bcr.5",
+              "apparentName": "zlib",
+              "unexpanded": true
+            },
+            {
+              "key": "boringssl@0.20241024.0",
+              "name": "boringssl",
+              "version": "0.20241024.0",
+              "apparentName": "boringssl",
+              "dependencies": [
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "googletest@1.17.0",
+                  "name": "googletest",
+                  "version": "1.17.0",
+                  "apparentName": "googletest",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_cc@0.2.18",
+                  "name": "rules_cc",
+                  "version": "0.2.18",
+                  "apparentName": "rules_cc",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_license@1.0.0",
+                  "name": "rules_license",
+                  "version": "1.0.0",
+                  "apparentName": "rules_license",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            },
+            {
+              "key": "c-ares@1.15.0",
+              "name": "c-ares",
+              "version": "1.15.0",
+              "apparentName": "com_github_cares_cares",
+              "dependencies": [
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": [
+                {
+                  "key": "grpc@1.69.0",
+                  "name": "grpc",
+                  "version": "1.69.0",
+                  "apparentName": "com_github_grpc_grpc",
+                  "unexpanded": true
+                }
+              ]
+            },
+            {
+              "key": "cython@3.0.11-1",
+              "name": "cython",
+              "version": "3.0.11-1",
+              "apparentName": "cython",
+              "dependencies": [
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_python@2.3.0",
+                  "name": "rules_python",
+                  "version": "2.3.0",
+                  "apparentName": "rules_python",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            },
+            {
+              "key": "opencensus-cpp@0.0.0-20230502-50eb5de",
+              "name": "opencensus-cpp",
+              "version": "0.0.0-20230502-50eb5de",
+              "apparentName": "io_opencensus_cpp",
+              "dependencies": [
+                {
+                  "key": "abseil-cpp@20250814.1",
+                  "name": "abseil-cpp",
+                  "version": "20250814.1",
+                  "apparentName": "com_google_absl",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "boringssl@0.20241024.0",
+                  "name": "boringssl",
+                  "version": "0.20241024.0",
+                  "apparentName": "boringssl",
+                  "unexpanded": true
+                },
+                {
+                  "key": "google_benchmark@1.9.4",
+                  "name": "google_benchmark",
+                  "version": "1.9.4",
+                  "apparentName": "com_github_google_benchmark",
+                  "unexpanded": true
+                },
+                {
+                  "key": "googleapis@0.0.0-20240819-fe8ba054a",
+                  "name": "googleapis",
+                  "version": "0.0.0-20240819-fe8ba054a",
+                  "apparentName": "com_google_googleapis",
+                  "unexpanded": true
+                },
+                {
+                  "key": "googletest@1.17.0",
+                  "name": "googletest",
+                  "version": "1.17.0",
+                  "apparentName": "com_google_googletest",
+                  "unexpanded": true
+                },
+                {
+                  "key": "opencensus-proto@0.4.1",
+                  "name": "opencensus-proto",
+                  "version": "0.4.1",
+                  "apparentName": "opencensus_proto",
+                  "unexpanded": true
+                },
+                {
+                  "key": "protobuf@37.0-rc1",
+                  "name": "protobuf",
+                  "version": "37.0-rc1",
+                  "apparentName": "com_google_protobuf",
+                  "unexpanded": true
+                },
+                {
+                  "key": "zlib@1.3.1.bcr.5",
+                  "name": "zlib",
+                  "version": "1.3.1.bcr.5",
+                  "apparentName": "zlib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "curl@8.7.1",
+                  "name": "curl",
+                  "version": "8.7.1",
+                  "apparentName": "com_github_curl",
+                  "dependencies": [
+                    {
+                      "key": "bazel_skylib@1.9.0",
+                      "name": "bazel_skylib",
+                      "version": "1.9.0",
+                      "apparentName": "bazel_skylib",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "platforms@1.0.0",
+                      "name": "platforms",
+                      "version": "1.0.0",
+                      "apparentName": "platforms",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "mbedtls@3.6.0",
+                      "name": "mbedtls",
+                      "version": "3.6.0",
+                      "apparentName": "mbedtls",
+                      "dependencies": [
+                        {
+                          "key": "bazel_tools@_",
+                          "name": "bazel_tools",
+                          "version": "",
+                          "apparentName": "bazel_tools",
+                          "unexpanded": true
+                        },
+                        {
+                          "key": "platforms@1.0.0",
+                          "name": "platforms",
+                          "version": "1.0.0",
+                          "apparentName": "platforms",
+                          "unexpanded": true
+                        }
+                      ],
+                      "indirectDependencies": [],
+                      "cycles": []
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                },
+                {
+                  "key": "prometheus-cpp@1.3.0",
+                  "name": "prometheus-cpp",
+                  "version": "1.3.0",
+                  "apparentName": "com_github_jupp0r_prometheus_cpp",
+                  "dependencies": [
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "boringssl@0.20241024.0",
+                      "name": "boringssl",
+                      "version": "0.20241024.0",
+                      "apparentName": "boringssl",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "curl@8.7.1",
+                      "name": "curl",
+                      "version": "8.7.1",
+                      "apparentName": "com_github_curl",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "platforms@1.0.0",
+                      "name": "platforms",
+                      "version": "1.0.0",
+                      "apparentName": "platforms",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_cc@0.2.18",
+                      "name": "rules_cc",
+                      "version": "0.2.18",
+                      "apparentName": "rules_cc",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "zlib@1.3.1.bcr.5",
+                      "name": "zlib",
+                      "version": "1.3.1.bcr.5",
+                      "apparentName": "zlib",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "civetweb@1.16",
+                      "name": "civetweb",
+                      "version": "1.16",
+                      "apparentName": "civetweb",
+                      "dependencies": [
+                        {
+                          "key": "bazel_tools@_",
+                          "name": "bazel_tools",
+                          "version": "",
+                          "apparentName": "bazel_tools",
+                          "unexpanded": true
+                        },
+                        {
+                          "key": "boringssl@0.20241024.0",
+                          "name": "boringssl",
+                          "version": "0.20241024.0",
+                          "apparentName": "boringssl",
+                          "unexpanded": true
+                        },
+                        {
+                          "key": "platforms@1.0.0",
+                          "name": "platforms",
+                          "version": "1.0.0",
+                          "apparentName": "platforms",
+                          "unexpanded": true
+                        }
+                      ],
+                      "indirectDependencies": [],
+                      "cycles": []
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                },
+                {
+                  "key": "rapidjson@1.1.0.bcr.20241007",
+                  "name": "rapidjson",
+                  "version": "1.1.0.bcr.20241007",
+                  "apparentName": "com_github_tencent_rapidjson",
+                  "dependencies": [
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "googletest@1.17.0",
+                      "name": "googletest",
+                      "version": "1.17.0",
+                      "apparentName": "googletest",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_cc@0.2.18",
+                      "name": "rules_cc",
+                      "version": "0.2.18",
+                      "apparentName": "rules_cc",
+                      "unexpanded": true
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": [
+                {
+                  "key": "grpc@1.69.0",
+                  "name": "grpc",
+                  "version": "1.69.0",
+                  "apparentName": "com_github_grpc_grpc",
+                  "unexpanded": true
+                }
+              ]
+            },
+            {
+              "key": "opentelemetry-cpp@1.16.0",
+              "name": "opentelemetry-cpp",
+              "version": "1.16.0",
+              "apparentName": "io_opentelemetry_cpp",
+              "dependencies": [
+                {
+                  "key": "abseil-cpp@20250814.1",
+                  "name": "abseil-cpp",
+                  "version": "20250814.1",
+                  "apparentName": "com_google_absl",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "curl@8.7.1",
+                  "name": "curl",
+                  "version": "8.7.1",
+                  "apparentName": "curl",
+                  "unexpanded": true
+                },
+                {
+                  "key": "opentelemetry-proto@1.4.0.bcr.1",
+                  "name": "opentelemetry-proto",
+                  "version": "1.4.0.bcr.1",
+                  "apparentName": "com_github_opentelemetry_proto",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                },
+                {
+                  "key": "prometheus-cpp@1.3.0",
+                  "name": "prometheus-cpp",
+                  "version": "1.3.0",
+                  "apparentName": "com_github_jupp0r_prometheus_cpp",
+                  "unexpanded": true
+                },
+                {
+                  "key": "protobuf@37.0-rc1",
+                  "name": "protobuf",
+                  "version": "37.0-rc1",
+                  "apparentName": "com_google_protobuf",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_proto@7.1.0",
+                  "name": "rules_proto",
+                  "version": "7.1.0",
+                  "apparentName": "rules_proto",
+                  "unexpanded": true
+                },
+                {
+                  "key": "zlib@1.3.1.bcr.5",
+                  "name": "zlib",
+                  "version": "1.3.1.bcr.5",
+                  "apparentName": "zlib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "nlohmann_json@3.11.3",
+                  "name": "nlohmann_json",
+                  "version": "3.11.3",
+                  "apparentName": "github_nlohmann_json",
+                  "dependencies": [
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                },
+                {
+                  "key": "opentracing-cpp@1.6.0",
+                  "name": "opentracing-cpp",
+                  "version": "1.6.0",
+                  "apparentName": "com_github_opentracing",
+                  "dependencies": [
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": [
+                {
+                  "key": "grpc@1.69.0",
+                  "name": "grpc",
+                  "version": "1.69.0",
+                  "apparentName": "com_github_grpc_grpc",
+                  "unexpanded": true
+                }
+              ]
+            },
+            {
+              "key": "rules_apple@4.1.0",
+              "name": "rules_apple",
+              "version": "4.1.0",
+              "apparentName": "build_bazel_rules_apple",
+              "dependencies": [
+                {
+                  "key": "apple_support@2.5.2",
+                  "name": "apple_support",
+                  "version": "2.5.2",
+                  "apparentName": "build_bazel_apple_support",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_features@1.43.0",
+                  "name": "bazel_features",
+                  "version": "1.43.0",
+                  "apparentName": "bazel_features",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_cc@0.2.18",
+                  "name": "rules_cc",
+                  "version": "0.2.18",
+                  "apparentName": "rules_cc",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_python@2.3.0",
+                  "name": "rules_python",
+                  "version": "2.3.0",
+                  "apparentName": "rules_python",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_shell@0.6.1",
+                  "name": "rules_shell",
+                  "version": "0.6.1",
+                  "apparentName": "rules_shell",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_swift@3.1.2",
+                  "name": "rules_swift",
+                  "version": "3.1.2",
+                  "apparentName": "build_bazel_rules_swift",
+                  "dependencies": [
+                    {
+                      "key": "apple_support@2.5.2",
+                      "name": "apple_support",
+                      "version": "2.5.2",
+                      "apparentName": "build_bazel_apple_support",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "bazel_features@1.43.0",
+                      "name": "bazel_features",
+                      "version": "1.43.0",
+                      "apparentName": "bazel_features",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "bazel_skylib@1.9.0",
+                      "name": "bazel_skylib",
+                      "version": "1.9.0",
+                      "apparentName": "bazel_skylib",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "nlohmann_json@3.11.3",
+                      "name": "nlohmann_json",
+                      "version": "3.11.3",
+                      "apparentName": "com_github_nlohmann_json",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "platforms@1.0.0",
+                      "name": "platforms",
+                      "version": "1.0.0",
+                      "apparentName": "platforms",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "protobuf@37.0-rc1",
+                      "name": "protobuf",
+                      "version": "37.0-rc1",
+                      "apparentName": "com_google_protobuf",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_cc@0.2.18",
+                      "name": "rules_cc",
+                      "version": "0.2.18",
+                      "apparentName": "rules_cc",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_shell@0.6.1",
+                      "name": "rules_shell",
+                      "version": "0.6.1",
+                      "apparentName": "rules_shell",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "swift_argument_parser@1.3.1.2",
+                      "name": "swift_argument_parser",
+                      "version": "1.3.1.2",
+                      "apparentName": "com_github_apple_swift_argument_parser",
+                      "dependencies": [
+                        {
+                          "key": "apple_support@2.5.2",
+                          "name": "apple_support",
+                          "version": "2.5.2",
+                          "apparentName": "build_bazel_apple_support",
+                          "unexpanded": true
+                        },
+                        {
+                          "key": "bazel_tools@_",
+                          "name": "bazel_tools",
+                          "version": "",
+                          "apparentName": "bazel_tools",
+                          "unexpanded": true
+                        }
+                      ],
+                      "indirectDependencies": [],
+                      "cycles": [
+                        {
+                          "key": "rules_swift@3.1.2",
+                          "name": "rules_swift",
+                          "version": "3.1.2",
+                          "apparentName": "rules_swift",
+                          "unexpanded": true
+                        }
+                      ]
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": [
+            {
+              "key": "grpc-java@1.71.0",
+              "name": "grpc-java",
+              "version": "1.71.0",
+              "apparentName": "grpc-java",
+              "unexpanded": true
+            }
+          ]
+        },
+        {
+          "key": "grpc-proto@0.0.0-20240627-ec30f58",
+          "name": "grpc-proto",
+          "version": "0.0.0-20240627-ec30f58",
+          "apparentName": "io_grpc_grpc_proto",
+          "dependencies": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "googleapis@0.0.0-20240819-fe8ba054a",
+              "name": "googleapis",
+              "version": "0.0.0-20240819-fe8ba054a",
+              "apparentName": "com_google_googleapis",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "opencensus-proto@0.4.1",
+          "name": "opencensus-proto",
+          "version": "0.4.1",
+          "apparentName": "opencensus_proto",
+          "dependencies": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "grpc@1.69.0",
+              "name": "grpc",
+              "version": "1.69.0",
+              "apparentName": "com_github_grpc_grpc",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_go@0.59.0",
+              "name": "rules_go",
+              "version": "0.59.0",
+              "apparentName": "io_bazel_rules_go",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "protoc-gen-validate@1.0.4.bcr.2",
+          "name": "protoc-gen-validate",
+          "version": "1.0.4.bcr.2",
+          "apparentName": "com_envoyproxy_protoc_gen_validate",
+          "dependencies": [
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "gazelle@0.47.0",
+              "name": "gazelle",
+              "version": "0.47.0",
+              "apparentName": "bazel_gazelle",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "re2@2024-07-02.bcr.1",
+              "name": "re2",
+              "version": "2024-07-02.bcr.1",
+              "apparentName": "com_googlesource_code_re2",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_go@0.59.0",
+              "name": "rules_go",
+              "version": "0.59.0",
+              "apparentName": "io_bazel_rules_go",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_java@9.3.0",
+              "name": "rules_java",
+              "version": "9.3.0",
+              "apparentName": "rules_java",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_python@2.3.0",
+              "name": "rules_python",
+              "version": "2.3.0",
+              "apparentName": "rules_python",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "rules_go@0.59.0",
+          "name": "rules_go",
+          "version": "0.59.0",
+          "apparentName": "io_bazel_rules_go",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "io_bazel_rules_go_bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "gazelle@0.47.0",
+              "name": "gazelle",
+              "version": "0.47.0",
+              "apparentName": "gazelle",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_shell@0.6.1",
+              "name": "rules_shell",
+              "version": "0.6.1",
+              "apparentName": "rules_shell",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "rules_jvm_external@6.9",
+          "name": "rules_jvm_external",
+          "version": "6.9",
+          "apparentName": "rules_jvm_external",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "package_metadata@0.0.7",
+              "name": "package_metadata",
+              "version": "0.0.7",
+              "apparentName": "package_metadata",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_java@9.3.0",
+              "name": "rules_java",
+              "version": "9.3.0",
+              "apparentName": "rules_java",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_kotlin@2.3.20",
+              "name": "rules_kotlin",
+              "version": "2.3.20",
+              "apparentName": "rules_kotlin",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_license@1.0.0",
+              "name": "rules_license",
+              "version": "1.0.0",
+              "apparentName": "rules_license",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_shell@0.6.1",
+              "name": "rules_shell",
+              "version": "0.6.1",
+              "apparentName": "rules_shell",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_android@0.7.1",
+              "name": "rules_android",
+              "version": "0.7.1",
+              "apparentName": "rules_android",
+              "dependencies": [
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "gazelle@0.47.0",
+                  "name": "gazelle",
+                  "version": "0.47.0",
+                  "apparentName": "bazel_gazelle",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                },
+                {
+                  "key": "protobuf@37.0-rc1",
+                  "name": "protobuf",
+                  "version": "37.0-rc1",
+                  "apparentName": "com_google_protobuf",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_cc@0.2.18",
+                  "name": "rules_cc",
+                  "version": "0.2.18",
+                  "apparentName": "rules_cc",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_go@0.59.0",
+                  "name": "rules_go",
+                  "version": "0.59.0",
+                  "apparentName": "io_bazel_rules_go",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_java@9.3.0",
+                  "name": "rules_java",
+                  "version": "9.3.0",
+                  "apparentName": "rules_java",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_license@1.0.0",
+                  "name": "rules_license",
+                  "version": "1.0.0",
+                  "apparentName": "rules_license",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_proto@7.1.0",
+                  "name": "rules_proto",
+                  "version": "7.1.0",
+                  "apparentName": "rules_proto",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_python@2.3.0",
+                  "name": "rules_python",
+                  "version": "2.3.0",
+                  "apparentName": "rules_python",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_shell@0.6.1",
+                  "name": "rules_shell",
+                  "version": "0.6.1",
+                  "apparentName": "rules_shell",
+                  "unexpanded": true
+                },
+                {
+                  "key": "abseil-py@2.1.0",
+                  "name": "abseil-py",
+                  "version": "2.1.0",
+                  "apparentName": "py_absl",
+                  "dependencies": [
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_python@2.3.0",
+                      "name": "rules_python",
+                      "version": "2.3.0",
+                      "apparentName": "rules_python",
+                      "unexpanded": true
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                },
+                {
+                  "key": "bazel_worker_api@0.0.8",
+                  "name": "bazel_worker_api",
+                  "version": "0.0.8",
+                  "apparentName": "bazel_worker_api",
+                  "dependencies": [
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "protobuf@37.0-rc1",
+                      "name": "protobuf",
+                      "version": "37.0-rc1",
+                      "apparentName": "com_google_protobuf",
+                      "unexpanded": true
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                },
+                {
+                  "key": "bazel_worker_java@0.0.8",
+                  "name": "bazel_worker_java",
+                  "version": "0.0.8",
+                  "apparentName": "bazel_worker_java",
+                  "dependencies": [
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "bazel_worker_api@0.0.8",
+                      "name": "bazel_worker_api",
+                      "version": "0.0.8",
+                      "apparentName": "bazel_worker_api",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "protobuf@37.0-rc1",
+                      "name": "protobuf",
+                      "version": "37.0-rc1",
+                      "apparentName": "com_google_protobuf",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_java@9.3.0",
+                      "name": "rules_java",
+                      "version": "9.3.0",
+                      "apparentName": "rules_java",
+                      "unexpanded": true
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": [
+                    {
+                      "key": "rules_jvm_external@6.9",
+                      "name": "rules_jvm_external",
+                      "version": "6.9",
+                      "apparentName": "rules_jvm_external",
+                      "unexpanded": true
+                    }
+                  ]
+                },
+                {
+                  "key": "rules_robolectric@4.14.1.2",
+                  "name": "rules_robolectric",
+                  "version": "4.14.1.2",
+                  "apparentName": "robolectric",
+                  "dependencies": [
+                    {
+                      "key": "bazel_skylib@1.9.0",
+                      "name": "bazel_skylib",
+                      "version": "1.9.0",
+                      "apparentName": "bazel_skylib",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "bazel_tools@_",
+                      "name": "bazel_tools",
+                      "version": "",
+                      "apparentName": "bazel_tools",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_java@9.3.0",
+                      "name": "rules_java",
+                      "version": "9.3.0",
+                      "apparentName": "rules_java",
+                      "unexpanded": true
+                    },
+                    {
+                      "key": "rules_python@2.3.0",
+                      "name": "rules_python",
+                      "version": "2.3.0",
+                      "apparentName": "rules_python",
+                      "unexpanded": true
+                    }
+                  ],
+                  "indirectDependencies": [],
+                  "cycles": []
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": [
+                {
+                  "key": "rules_jvm_external@6.9",
+                  "name": "rules_jvm_external",
+                  "version": "6.9",
+                  "apparentName": "rules_jvm_external",
+                  "unexpanded": true
+                }
+              ]
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "rules_proto@7.1.0",
+          "name": "rules_proto",
+          "version": "7.1.0",
+          "apparentName": "rules_proto",
+          "dependencies": [
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_license@1.0.0",
+              "name": "rules_license",
+              "version": "1.0.0",
+              "apparentName": "rules_license",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "xds@0.0.0-20240423-555b57e",
+          "name": "xds",
+          "version": "0.0.0-20240423-555b57e",
+          "apparentName": "com_github_cncf_xds",
+          "dependencies": [
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "cel-spec@0.15.0",
+              "name": "cel-spec",
+              "version": "0.15.0",
+              "apparentName": "dev_cel",
+              "unexpanded": true
+            },
+            {
+              "key": "gazelle@0.47.0",
+              "name": "gazelle",
+              "version": "0.47.0",
+              "apparentName": "bazel_gazelle",
+              "unexpanded": true
+            },
+            {
+              "key": "googleapis@0.0.0-20240819-fe8ba054a",
+              "name": "googleapis",
+              "version": "0.0.0-20240819-fe8ba054a",
+              "apparentName": "com_google_googleapis",
+              "unexpanded": true
+            },
+            {
+              "key": "grpc@1.69.0",
+              "name": "grpc",
+              "version": "1.69.0",
+              "apparentName": "com_github_grpc_grpc",
+              "unexpanded": true
+            },
+            {
+              "key": "protobuf@37.0-rc1",
+              "name": "protobuf",
+              "version": "37.0-rc1",
+              "apparentName": "com_google_protobuf",
+              "unexpanded": true
+            },
+            {
+              "key": "protoc-gen-validate@1.0.4.bcr.2",
+              "name": "protoc-gen-validate",
+              "version": "1.0.4.bcr.2",
+              "apparentName": "com_envoyproxy_protoc_gen_validate",
+              "unexpanded": true
+            },
+            {
+              "key": "re2@2024-07-02.bcr.1",
+              "name": "re2",
+              "version": "2024-07-02.bcr.1",
+              "apparentName": "com_googlesource_code_re2",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_go@0.59.0",
+              "name": "rules_go",
+              "version": "0.59.0",
+              "apparentName": "io_bazel_rules_go",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_proto@7.1.0",
+              "name": "rules_proto",
+              "version": "7.1.0",
+              "apparentName": "rules_proto",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        }
+      ],
+      "indirectDependencies": [],
+      "cycles": []
+    },
+    {
+      "key": "protobuf@37.0-rc1",
+      "name": "protobuf",
+      "version": "37.0-rc1",
+      "apparentName": "protobuf",
+      "dependencies": [
+        {
+          "key": "apple_support@2.5.2",
+          "name": "apple_support",
+          "version": "2.5.2",
+          "apparentName": "build_bazel_apple_support",
+          "unexpanded": true
+        },
+        {
+          "key": "bazel_skylib@1.9.0",
+          "name": "bazel_skylib",
+          "version": "1.9.0",
+          "apparentName": "bazel_skylib",
+          "unexpanded": true
+        },
+        {
+          "key": "bazel_tools@_",
+          "name": "bazel_tools",
+          "version": "",
+          "apparentName": "bazel_tools",
+          "unexpanded": true
+        },
+        {
+          "key": "platforms@1.0.0",
+          "name": "platforms",
+          "version": "1.0.0",
+          "apparentName": "platforms",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_cc@0.2.18",
+          "name": "rules_cc",
+          "version": "0.2.18",
+          "apparentName": "rules_cc",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_java@9.3.0",
+          "name": "rules_java",
+          "version": "9.3.0",
+          "apparentName": "rules_java",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_jvm_external@6.9",
+          "name": "rules_jvm_external",
+          "version": "6.9",
+          "apparentName": "rules_jvm_external",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_license@1.0.0",
+          "name": "rules_license",
+          "version": "1.0.0",
+          "apparentName": "rules_license",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_proto@7.1.0",
+          "name": "rules_proto",
+          "version": "7.1.0",
+          "apparentName": "rules_proto",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_python@2.3.0",
+          "name": "rules_python",
+          "version": "2.3.0",
+          "apparentName": "rules_python",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_shell@0.6.1",
+          "name": "rules_shell",
+          "version": "0.6.1",
+          "apparentName": "rules_shell",
+          "unexpanded": true
+        },
+        {
+          "key": "zlib@1.3.1.bcr.5",
+          "name": "zlib",
+          "version": "1.3.1.bcr.5",
+          "apparentName": "zlib",
+          "unexpanded": true
+        },
+        {
+          "key": "abseil-cpp@20250814.1",
+          "name": "abseil-cpp",
+          "version": "20250814.1",
+          "apparentName": "abseil-cpp",
+          "dependencies": [
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "googletest@1.17.0",
+              "name": "googletest",
+              "version": "1.17.0",
+              "apparentName": "googletest",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "jsoncpp@1.9.6.bcr.2",
+          "name": "jsoncpp",
+          "version": "1.9.6.bcr.2",
+          "apparentName": "jsoncpp",
+          "dependencies": [
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "re2@2024-07-02.bcr.1",
+          "name": "re2",
+          "version": "2024-07-02.bcr.1",
+          "apparentName": "re2",
+          "dependencies": [
+            {
+              "key": "abseil-cpp@20250814.1",
+              "name": "abseil-cpp",
+              "version": "20250814.1",
+              "apparentName": "abseil-cpp",
+              "unexpanded": true
+            },
+            {
+              "key": "apple_support@2.5.2",
+              "name": "apple_support",
+              "version": "2.5.2",
+              "apparentName": "apple_support",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_python@2.3.0",
+              "name": "rules_python",
+              "version": "2.3.0",
+              "apparentName": "rules_python",
+              "unexpanded": true
+            },
+            {
+              "key": "pybind11_bazel@2.12.0",
+              "name": "pybind11_bazel",
+              "version": "2.12.0",
+              "apparentName": "pybind11_bazel",
+              "dependencies": [
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_cc@0.2.18",
+                  "name": "rules_cc",
+                  "version": "0.2.18",
+                  "apparentName": "rules_cc",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_python@2.3.0",
+                  "name": "rules_python",
+                  "version": "2.3.0",
+                  "apparentName": "rules_python",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "rules_kotlin@2.3.20",
+          "name": "rules_kotlin",
+          "version": "2.3.20",
+          "apparentName": "rules_kotlin",
+          "dependencies": [
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_android@0.7.1",
+              "name": "rules_android",
+              "version": "0.7.1",
+              "apparentName": "rules_android",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_java@9.3.0",
+              "name": "rules_java",
+              "version": "9.3.0",
+              "apparentName": "rules_java",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_lib@3.1.0",
+              "name": "bazel_lib",
+              "version": "3.1.0",
+              "apparentName": "bazel_lib",
+              "dependencies": [
+                {
+                  "key": "bazel_features@1.43.0",
+                  "name": "bazel_features",
+                  "version": "1.43.0",
+                  "apparentName": "bazel_features",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_skylib@1.9.0",
+                  "name": "bazel_skylib",
+                  "version": "1.9.0",
+                  "apparentName": "bazel_skylib",
+                  "unexpanded": true
+                },
+                {
+                  "key": "bazel_tools@_",
+                  "name": "bazel_tools",
+                  "version": "",
+                  "apparentName": "bazel_tools",
+                  "unexpanded": true
+                },
+                {
+                  "key": "platforms@1.0.0",
+                  "name": "platforms",
+                  "version": "1.0.0",
+                  "apparentName": "platforms",
+                  "unexpanded": true
+                },
+                {
+                  "key": "rules_shell@0.6.1",
+                  "name": "rules_shell",
+                  "version": "0.6.1",
+                  "apparentName": "rules_shell",
+                  "unexpanded": true
+                }
+              ],
+              "indirectDependencies": [],
+              "cycles": []
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "rules_pkg@1.0.1",
+          "name": "rules_pkg",
+          "version": "1.0.1",
+          "apparentName": "rules_pkg",
+          "dependencies": [
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_license@1.0.0",
+              "name": "rules_license",
+              "version": "1.0.0",
+              "apparentName": "rules_license",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_python@2.3.0",
+              "name": "rules_python",
+              "version": "2.3.0",
+              "apparentName": "rules_python",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        },
+        {
+          "key": "rules_rust@0.69.0",
+          "name": "rules_rust",
+          "version": "0.69.0",
+          "apparentName": "rules_rust",
+          "dependencies": [
+            {
+              "key": "apple_support@2.5.2",
+              "name": "apple_support",
+              "version": "2.5.2",
+              "apparentName": "build_bazel_apple_support",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_features@1.43.0",
+              "name": "bazel_features",
+              "version": "1.43.0",
+              "apparentName": "bazel_features",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            },
+            {
+              "key": "platforms@1.0.0",
+              "name": "platforms",
+              "version": "1.0.0",
+              "apparentName": "platforms",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_cc@0.2.18",
+              "name": "rules_cc",
+              "version": "0.2.18",
+              "apparentName": "rules_cc",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_license@1.0.0",
+              "name": "rules_license",
+              "version": "1.0.0",
+              "apparentName": "rules_license",
+              "unexpanded": true
+            },
+            {
+              "key": "rules_shell@0.6.1",
+              "name": "rules_shell",
+              "version": "0.6.1",
+              "apparentName": "rules_shell",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        }
+      ],
+      "indirectDependencies": [],
+      "cycles": []
+    },
+    {
+      "key": "rules_java@9.3.0",
+      "name": "rules_java",
+      "version": "9.3.0",
+      "apparentName": "rules_java",
+      "dependencies": [
+        {
+          "key": "abseil-cpp@20250814.1",
+          "name": "abseil-cpp",
+          "version": "20250814.1",
+          "apparentName": "com_google_absl",
+          "unexpanded": true
+        },
+        {
+          "key": "bazel_skylib@1.9.0",
+          "name": "bazel_skylib",
+          "version": "1.9.0",
+          "apparentName": "bazel_skylib",
+          "unexpanded": true
+        },
+        {
+          "key": "bazel_tools@_",
+          "name": "bazel_tools",
+          "version": "",
+          "apparentName": "bazel_tools",
+          "unexpanded": true
+        },
+        {
+          "key": "platforms@1.0.0",
+          "name": "platforms",
+          "version": "1.0.0",
+          "apparentName": "platforms",
+          "unexpanded": true
+        },
+        {
+          "key": "protobuf@37.0-rc1",
+          "name": "protobuf",
+          "version": "37.0-rc1",
+          "apparentName": "com_google_protobuf",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_cc@0.2.18",
+          "name": "rules_cc",
+          "version": "0.2.18",
+          "apparentName": "rules_cc",
+          "unexpanded": true
+        },
+        {
+          "key": "rules_license@1.0.0",
+          "name": "rules_license",
+          "version": "1.0.0",
+          "apparentName": "rules_license",
+          "unexpanded": true
+        },
+        {
+          "key": "zlib@1.3.1.bcr.5",
+          "name": "zlib",
+          "version": "1.3.1.bcr.5",
+          "apparentName": "zlib",
+          "unexpanded": true
+        },
+        {
+          "key": "bazel_features@1.43.0",
+          "name": "bazel_features",
+          "version": "1.43.0",
+          "apparentName": "bazel_features",
+          "dependencies": [
+            {
+              "key": "bazel_skylib@1.9.0",
+              "name": "bazel_skylib",
+              "version": "1.9.0",
+              "apparentName": "bazel_skylib",
+              "unexpanded": true
+            },
+            {
+              "key": "bazel_tools@_",
+              "name": "bazel_tools",
+              "version": "",
+              "apparentName": "bazel_tools",
+              "unexpanded": true
+            }
+          ],
+          "indirectDependencies": [],
+          "cycles": []
+        }
+      ],
+      "indirectDependencies": [],
+      "cycles": []
+    }
+  ],
+  "indirectDependencies": [],
+  "cycles": [],
+  "root": true
+}

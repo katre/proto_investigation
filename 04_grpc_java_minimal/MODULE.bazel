@@ -1,0 +1,27 @@
+module(name = "grpc_java_minimal")
+
+bazel_dep(name = "protobuf", version = "37.0-rc1")
+
+# The grpc-java version Bazel 9.3.0 itself uses. Bazel 9 can't load 1.71.0
+# without patches, so these are the patches Bazel 9.3.0 applies, copied from
+# https://github.com/bazelbuild/bazel/tree/9.3.0/third_party.
+bazel_dep(name = "grpc-java", version = "1.71.0")
+single_version_override(
+    module_name = "grpc-java",
+    patch_strip = 1,
+    patches = [
+        "//third_party:grpc-java.patch",
+        "//third_party:grpc-java-12207.patch",
+        "//third_party:grpc-java-12222.patch",
+        "//third_party:grpc-java-addloads.patch",
+    ],
+)
+
+# Needed to load java_binary. This matches the version protobuf already
+# resolves to.
+bazel_dep(name = "rules_java", version = "9.3.0")
+
+# grpc-java 1.71.0 -> google_benchmark 1.8.5 -> rules_foreign_cc 0.10.1, whose
+# module extension doesn't load on Bazel 9. Bazel's own graph resolves
+# google_benchmark to 1.9.4 (through grpc 1.76.0), which drops that dependency.
+bazel_dep(name = "google_benchmark", version = "1.9.4")
