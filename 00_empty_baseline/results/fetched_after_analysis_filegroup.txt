@@ -1,0 +1,11 @@
+_main
+bazel_features+
+bazel_features++version_extension+bazel_features_globals
+bazel_features++version_extension+bazel_features_version
+bazel_skylib+
+bazel_tools
+platforms
+platforms+host_platform+host_platform
+protobuf+
+rules_cc+
+rules_cc++compatibility_proxy+cc_compatibility_proxy

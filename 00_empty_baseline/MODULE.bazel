@@ -1,1 +1,5 @@
 module(name = "empty_baseline")
+
+# Only needed to load cc_library in //cc. Same version bazel_tools already
+# requires, so the module graph is unchanged.
+bazel_dep(name = "rules_cc", version = "0.2.17")

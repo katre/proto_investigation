@@ -1,4 +1,0 @@
-_main
-bazel_tools
-platforms
-platforms+host_platform+host_platform

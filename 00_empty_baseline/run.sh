@@ -7,8 +7,14 @@ record_env
 # Analysis first, in a pristine output base.
 "${B[@]}" query //... > "$R/query.txt" 2>/dev/null
 fetched fetched_after_query.txt
-"${B[@]}" build --nobuild //... 2>/dev/null
-fetched fetched_after_analysis.txt
+# A filegroup needs no toolchains.
+"${B[@]}" build --nobuild //:hello 2>/dev/null
+fetched fetched_after_analysis_filegroup.txt
+# A cc_library needs C++ toolchain resolution, which loads every registered
+# toolchain in the module graph.
+"${B[@]}" build --nobuild //cc:answer --toolchain_resolution_debug=.* > "$R/toolchain_resolution_cc.txt" 2>&1
+fetched fetched_after_analysis_cc_library.txt
+sizes fetched_sizes_kib.txt
 
 # Module graph inspection (separate output base, see common.sh).
 "${B_MOD[@]}" mod graph > "$R/mod_graph.txt" 2>/dev/null

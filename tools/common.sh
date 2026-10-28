@@ -26,3 +26,7 @@ record_env() {
 fetched() {
   "$TOOLS/fetched_repos.sh" "${STARTUP[@]}" > "$R/$1"
 }
+
+sizes() {
+  "$TOOLS/repo_sizes.sh" "${STARTUP[@]}" > "$R/$1"
+}

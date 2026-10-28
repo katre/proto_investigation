@@ -1,7 +1,9 @@
 # 00_empty_baseline: findings
 
-A project with an empty `module()` and a single `filegroup`, using Bazel 9.3.0
-(see `results/env.txt`).
+A project with an empty `module()`, a `filegroup` (`//:hello`) and a
+`cc_library` (`//cc:answer`). The only `bazel_dep` is `rules_cc@0.2.17`, which is
+needed to load `cc_library`. That's the same version `bazel_tools` already
+requires, so the module graph is unchanged. Bazel 9.3.0 (see `results/env.txt`).
 
 ## Module graph
 
@@ -40,18 +42,39 @@ A project with an empty `module()` and a single `filegroup`, using Bazel 9.3.0
 
 ## What is actually fetched
 
-- `bazel query //...` and `bazel build --nobuild //...` in a fresh output base
-  fetch only `platforms` (and `bazel_tools`/`_main`, which are local)
-  (`results/fetched_after_analysis.txt`). A module being in the graph does
-  **not** mean its archive gets downloaded during a normal build.
-- **Running `bazel mod graph` / `mod explain` does fetch 22 module and extension
-  repos**, including `protobuf+`, `rules_kotlin+`, `rules_jvm_external+`,
+- **No toolchains** (`bazel build --nobuild //:hello`, a `filegroup`): only `platforms`,
+  `bazel_features`, `bazel_skylib` and the `rules_cc` load-time repos are fetched
+  (`results/fetched_after_analysis_filegroup.txt`). A module being in the graph
+  does **not**, by itself, cause a download.
+- **Any toolchain resolution** (`bazel build --nobuild //cc:answer`, one
+  `cc_library`) fetches **68 repos** (`results/fetched_after_analysis_cc_library.txt`),
+  including:
+
+  | repo | size (KiB) |
+  |---|---|
+  | `protobuf+` | 53288 |
+  | `rules_kotlin+` | 25192 |
+  | `rules_python+` | 11868 |
+  | `rules_swift+` | 3072 |
+  | `apple_support+` | 1076 |
+
+  (`results/fetched_sizes_kib.txt`; `local_jdk` and `local_config_*` are local and
+  excluded.) The toolchain resolution debug output (`results/toolchain_resolution_cc.txt`)
+  only considers C++ toolchains. The fetches come from Bazel computing the set of
+  *registered* toolchains: it has to load the package of every
+  `register_toolchains()` target from every module in the graph to find its
+  `toolchain_type`, regardless of which type is being resolved. `rules_kotlin`
+  registers `//kotlin/internal:default_toolchain` and protobuf registers
+  `//bazel/private/toolchains:all`, so both repos (and a small
+  `com_github_jetbrains_kotlin` stub repo) are downloaded for a C++-only project
+  that never mentions protobuf or Kotlin.
+- **Running `bazel mod graph` / `mod explain` also fetches 22 module and
+  extension repos**, including `protobuf+`, `rules_kotlin+`, `rules_jvm_external+`,
   `rules_swift+`, `rules_apple+` and `googletest+`
   (`results/fetched_by_mod_commands.txt`). The `mod` commands appear to evaluate
   module extensions (e.g. `bazel_features++version_extension+*` and
   `rules_python++python+pythons_hub` were created), which requires fetching the
-  modules that define them. Users who run `bazel mod` to debug their graph will
-  see these downloads and may reasonably assume their build needs them.
+  modules that define them.
 
 ## Methodology notes
 

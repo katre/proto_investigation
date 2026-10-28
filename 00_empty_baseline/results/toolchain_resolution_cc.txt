@@ -1,0 +1,21 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+WARNING: Build option --toolchain_resolution_debug has changed, discarding analysis cache (this can be expensive, see https://bazel.build/advanced/performance/iteration-speed).
+Analyzing: target //cc:answer (1 packages loaded, 0 targets configured)
+INFO: ToolchainResolution: Target platform @@platforms//host:host: Selected execution platform @@platforms//host:host, 
+INFO: ToolchainResolution: Performing resolution of @@bazel_tools//tools/cpp:toolchain_type for target platform @@platforms//host:host
+      ToolchainResolution:   Rejected toolchain @@rules_cc++cc_configure_extension+local_config_cc_toolchains//:cc-toolchain-armeabi-v7a (resolves to @@rules_cc++cc_configure_extension+local_config_cc//:cc-compiler-armeabi-v7a) ; mismatching values: armv7, android
+      ToolchainResolution:   Toolchain @@rules_cc++cc_configure_extension+local_config_cc_toolchains//:cc-toolchain-k8 (resolves to @@rules_cc++cc_configure_extension+local_config_cc//:cc-compiler-k8) is compatible with target platform, searching for execution platforms:
+      ToolchainResolution:     Compatible execution platform @@platforms//host:host
+      ToolchainResolution:   All execution platforms have been assigned a @@bazel_tools//tools/cpp:toolchain_type toolchain, stopping
+      ToolchainResolution: Recap of selected @@bazel_tools//tools/cpp:toolchain_type toolchains for target platform @@platforms//host:host:
+      ToolchainResolution:   Selected @@rules_cc++cc_configure_extension+local_config_cc//:cc-compiler-k8 to run on execution platform @@platforms//host:host
+INFO: ToolchainResolution: Target platform @@platforms//host:host: Selected execution platform @@platforms//host:host, type @@bazel_tools//tools/cpp:toolchain_type -> toolchain @@rules_cc++cc_configure_extension+local_config_cc//:cc-compiler-k8
+INFO: ToolchainResolution: Target platform @@platforms//host:host: Selected execution platform @@platforms//host:host, 
+INFO: ToolchainResolution: Target platform @@platforms//host:host: Selected execution platform @@platforms//host:host, 
+INFO: Analyzed target //cc:answer (82 packages loaded, 455 targets configured).
+INFO: Found 1 target...
+INFO: Elapsed time: 0.735s, Critical Path: 0.00s
+INFO: 0 processes.
+INFO: Build completed successfully, 0 total actions
