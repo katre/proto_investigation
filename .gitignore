@@ -1,0 +1,4 @@
+bazel-*
+*.swp
+*/results/aquery_*.json.gz
+05_bazel_build/bazel/
