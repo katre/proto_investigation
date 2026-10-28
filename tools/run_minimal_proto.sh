@@ -33,6 +33,7 @@ for t in "${TARGETS[@]}"; do
   aquery "$t" "$t"
   fetched "fetched_after_${t}.txt"
 done
+sizes fetched_sizes_kib.txt
 
 # 4. Same, with the prebuilt-protoc flag flipped.
 for t in greeting_proto greeting_cc_proto; do

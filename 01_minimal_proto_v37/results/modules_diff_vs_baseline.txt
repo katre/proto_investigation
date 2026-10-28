@@ -1,0 +1,50 @@
+1a2
+> abseil-py@2.1.0
+3,4c4,6
+< bazel_features@1.42.1
+< bazel_skylib@1.8.2
+---
+> bazel_features@1.43.0
+> bazel_lib@3.1.0
+> bazel_skylib@1.9.0
+5a8,9
+> bazel_worker_api@0.0.8
+> bazel_worker_java@0.0.8
+6a11
+> gazelle@0.47.0
+8,9c13,14
+< jsoncpp@1.9.6
+< nlohmann_json@3.6.1
+---
+> jsoncpp@1.9.6.bcr.2
+> package_metadata@0.0.7
+11c16
+< protobuf@33.4
+---
+> protobuf@37.0-rc1
+14,19c19,24
+< rules_android@0.1.1
+< rules_apple@4.1.0
+< rules_cc@0.2.17
+< rules_java@9.1.0
+< rules_jvm_external@6.7
+< rules_kotlin@1.9.6
+---
+> rules_android@0.7.1
+> rules_cc@0.2.18
+> rules_go@0.59.0
+> rules_java@9.3.0
+> rules_jvm_external@6.9
+> rules_kotlin@2.3.20
+23c28,30
+< rules_python@1.7.0
+---
+> rules_python@2.3.0
+> rules_robolectric@4.14.1.2
+> rules_rust@0.69.0
+25,27c32
+< rules_swift@3.1.2
+< stardoc@0.7.2
+< swift_argument_parser@1.3.1.2
+---
+> toml.bzl@0.4.1

@@ -1,0 +1,8 @@
+module(name = "minimal_proto_v37")
+
+bazel_dep(name = "protobuf", version = "37.0-rc1")
+
+# Needed to load cc_binary/java_binary. Versions match what protobuf already
+# resolves to, so these don't change the module graph.
+bazel_dep(name = "rules_cc", version = "0.2.18")
+bazel_dep(name = "rules_java", version = "9.3.0")

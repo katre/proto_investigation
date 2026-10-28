@@ -1,0 +1,55 @@
+### rules_kotlin
+<root> (minimal_proto_v37@_)
+└───protobuf@37.0-rc1 
+    ├───rules_jvm_external@6.9 
+    │   └───rules_kotlin@2.3.20 # 
+    └───rules_kotlin@2.3.20 # 
+
+### rules_rust
+<root> (minimal_proto_v37@_)
+└───protobuf@37.0-rc1 
+    └───rules_rust@0.69.0 # 
+
+### rules_jvm_external
+<root> (minimal_proto_v37@_)
+└───protobuf@37.0-rc1 
+    └───rules_jvm_external@6.9 # 
+
+### rules_python
+<root> (minimal_proto_v37@_)
+├───bazel_tools@_ 
+│   └───rules_python@2.3.0 # 
+└───protobuf@37.0-rc1 
+    ├───re2@2024-07-02.bcr.1 
+    │   ├───pybind11_bazel@2.12.0 
+    │   │   └───rules_python@2.3.0 # 
+    │   └───rules_python@2.3.0 # 
+    ├───rules_pkg@1.0.1 
+    │   └───rules_python@2.3.0 # 
+    ├───rules_python@2.3.0 # 
+    └╌╌╌rules_android@0.7.1 
+        ├───abseil-py@2.1.0 
+        │   └───rules_python@2.3.0 # 
+        ├───rules_python@2.3.0 # 
+        └───rules_robolectric@4.14.1.2 
+            └───rules_python@2.3.0 # 
+
+### rules_pkg
+<root> (minimal_proto_v37@_)
+└───protobuf@37.0-rc1 
+    └───rules_pkg@1.0.1 # 
+
+### rules_apple
+(rules_apple is not in the module graph)
+### jsoncpp
+<root> (minimal_proto_v37@_)
+└───protobuf@37.0-rc1 
+    └───jsoncpp@1.9.6.bcr.2 # 
+
+### re2
+<root> (minimal_proto_v37@_)
+└───protobuf@37.0-rc1 
+    ├───re2@2024-07-02.bcr.1 # 
+    └╌╌╌googletest@1.17.0 
+        └───re2@2024-07-02.bcr.1 # 
+
