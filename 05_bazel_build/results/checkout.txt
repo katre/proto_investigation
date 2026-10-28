@@ -1,0 +1,2 @@
+bazel checkout: e89755babf3e941bc1e9d8120b1cd48854ab9dfa (tag 9.3.0)
+original .bazelversion: 9.2.0

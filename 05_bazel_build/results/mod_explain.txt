@@ -1,0 +1,81 @@
+### protobuf
+<root> (bazel@9.3.0)
+├───bazel_tools@_ 
+│   └───protobuf@33.4 # 
+├───googleapis@0.0.0-20250604-de157ca3 
+│   ├───protobuf@33.4 # 
+│   └───rules_proto@7.1.0 
+│       └───protobuf@33.4 # 
+├───googleapis-java@1.0.0 
+│   └───protobuf@33.4 # 
+├───grpc@1.76.0.bcr.1 
+│   ├───envoy_api@0.0.0-20251105-4a2b9a3 
+│   │   ├───gazelle@0.46.0 
+│   │   │   └───protobuf@33.4 # 
+│   │   ├───opentelemetry-proto@1.5.0 
+│   │   │   └───protobuf@33.4 # 
+│   │   └───protobuf@33.4 # 
+│   ├───opencensus-cpp@0.0.0-20230502-50eb5de.bcr.2 
+│   │   └───protobuf@33.4 # 
+│   ├───opentelemetry-cpp@1.19.0 
+│   │   └───protobuf@33.4 # 
+│   ├───protobuf@33.4 # 
+│   ├───protoc-gen-validate@1.2.1.bcr.1 
+│   │   └───protobuf@33.4 # 
+│   └───xds@0.0.0-20240423-555b57e 
+│       └───protobuf@33.4 # 
+├───grpc-java@1.71.0 
+│   ├───cel-spec@0.24.0 
+│   │   ├───googleapis-cc@1.0.0 
+│   │   │   └───protobuf@33.4 # 
+│   │   └───protobuf@33.4 # 
+│   ├───grpc-proto@0.0.0-20240627-ec30f58 
+│   │   └───protobuf@33.4 # 
+│   ├───opencensus-proto@0.4.1.bcr.2 
+│   │   └───protobuf@33.4 # 
+│   ├───protobuf@33.4 # 
+│   └───rules_go@0.59.0 
+│       └───protobuf@33.4 # 
+├───protobuf@33.4 # 
+├───remoteapis@_ 
+│   └───protobuf@33.4 # 
+├───rules_cc@0.2.17 
+│   └───protobuf@33.4 # 
+├───rules_java@9.1.0 
+│   └───protobuf@33.4 # 
+├───rules_python@1.7.0 
+│   └───protobuf@33.4 # 
+├───rules_swift@3.3.0 
+│   └───protobuf@33.4 # 
+└───stardoc@0.8.0 
+    └───protobuf@33.4 # 
+
+### grpc
+<root> (bazel@9.3.0)
+├───grpc@1.76.0.bcr.1 # 
+└───grpc-java@1.71.0 
+    ├───grpc@1.76.0.bcr.1 # 
+    └───opencensus-proto@0.4.1.bcr.2 
+        └───grpc@1.76.0.bcr.1 # 
+
+### grpc-java
+<root> (bazel@9.3.0)
+├───googleapis-grpc-java@1.0.0 
+│   └───grpc-java@1.71.0 # 
+├───grpc-java@1.71.0 # 
+└───remoteapis@_ 
+    └───grpc-java@1.71.0 # 
+
+### googleapis-grpc-java
+<root> (bazel@9.3.0)
+└───googleapis-grpc-java@1.0.0 # 
+
+### rules_kotlin
+<root> (bazel@9.3.0)
+├───protobuf@33.4 
+│   └───rules_kotlin@1.9.6 # 
+└───rules_jvm_external@6.6 
+    └───rules_kotlin@1.9.6 # 
+
+### rules_rust
+(rules_rust is not in the module graph)

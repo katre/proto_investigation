@@ -1,0 +1,7 @@
+      2 ToolchainResolution: Target platform @@platforms//host:host: Selected execution platform //:default_host_platform, type @@protobuf+//bazel/private:proto_toolchain_type -> toolchain @@protobuf+//bazel/private/toolchains:protoc_sources
+      2 ToolchainResolution: Target platform //:default_host_platform: Selected execution platform //:default_host_platform, type @@protobuf+//bazel/private:proto_toolchain_type -> toolchain @@protobuf+//bazel/private/toolchains:protoc_sources
+      2       ToolchainResolution:   All execution platforms have been assigned a @@protobuf+//bazel/private:proto_toolchain_type toolchain, stopping
+      1 ToolchainResolution: Performing resolution of @@protobuf+//bazel/private:proto_toolchain_type for target platform @@platforms//host:host
+      1 ToolchainResolution: Performing resolution of @@protobuf+//bazel/private:proto_toolchain_type for target platform //:default_host_platform
+      1       ToolchainResolution: Recap of selected @@protobuf+//bazel/private:proto_toolchain_type toolchains for target platform @@platforms//host:host:
+      1       ToolchainResolution: Recap of selected @@protobuf+//bazel/private:proto_toolchain_type toolchains for target platform //:default_host_platform:
