@@ -1,0 +1,101 @@
+load("@supply_chain_tools//sbom:cyclonedx.bzl", "cyclonedx")
+load("@supply_chain_tools//sbom:sbom.bzl", "sbom")
+load("@supply_chain_tools//sbom:spdx.bzl", "spdx")
+
+# One sbom + cyclonedx + spdx triple per target in //proto.
+
+sbom(
+    name = "greeting_proto_sbom",
+    require_root_metadata = False,
+    target = "//proto:greeting_proto",
+)
+
+cyclonedx(
+    name = "greeting_proto_cyclonedx",
+    sbom = ":greeting_proto_sbom",
+)
+
+spdx(
+    name = "greeting_proto_spdx",
+    sbom = ":greeting_proto_sbom",
+)
+
+sbom(
+    name = "greeting_cc_proto_sbom",
+    require_root_metadata = False,
+    target = "//proto:greeting_cc_proto",
+)
+
+cyclonedx(
+    name = "greeting_cc_proto_cyclonedx",
+    sbom = ":greeting_cc_proto_sbom",
+)
+
+spdx(
+    name = "greeting_cc_proto_spdx",
+    sbom = ":greeting_cc_proto_sbom",
+)
+
+sbom(
+    name = "greeting_java_proto_sbom",
+    require_root_metadata = False,
+    target = "//proto:greeting_java_proto",
+)
+
+cyclonedx(
+    name = "greeting_java_proto_cyclonedx",
+    sbom = ":greeting_java_proto_sbom",
+)
+
+spdx(
+    name = "greeting_java_proto_spdx",
+    sbom = ":greeting_java_proto_sbom",
+)
+
+sbom(
+    name = "greeting_py_proto_sbom",
+    require_root_metadata = False,
+    target = "//proto:greeting_py_proto",
+)
+
+cyclonedx(
+    name = "greeting_py_proto_cyclonedx",
+    sbom = ":greeting_py_proto_sbom",
+)
+
+spdx(
+    name = "greeting_py_proto_spdx",
+    sbom = ":greeting_py_proto_sbom",
+)
+
+sbom(
+    name = "greeting_cc_bin_sbom",
+    require_root_metadata = False,
+    target = "//proto:greeting_cc_bin",
+)
+
+cyclonedx(
+    name = "greeting_cc_bin_cyclonedx",
+    sbom = ":greeting_cc_bin_sbom",
+)
+
+spdx(
+    name = "greeting_cc_bin_spdx",
+    sbom = ":greeting_cc_bin_sbom",
+)
+
+sbom(
+    name = "greeting_java_bin_sbom",
+    require_root_metadata = False,
+    target = "//proto:greeting_java_bin",
+)
+
+cyclonedx(
+    name = "greeting_java_bin_cyclonedx",
+    sbom = ":greeting_java_bin_sbom",
+)
+
+spdx(
+    name = "greeting_java_bin_spdx",
+    sbom = ":greeting_java_bin_sbom",
+)

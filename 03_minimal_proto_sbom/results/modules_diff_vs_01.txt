@@ -1,0 +1,15 @@
+4c4
+< bazel_features@1.43.0
+---
+> bazel_features@1.46.0
+14c14
+< package_metadata@0.0.7
+---
+> package_metadata@_
+21c21
+< rules_go@0.59.0
+---
+> rules_go@0.60.0
+31a32,33
+> supply-chain-go@_
+> supply_chain_tools@_

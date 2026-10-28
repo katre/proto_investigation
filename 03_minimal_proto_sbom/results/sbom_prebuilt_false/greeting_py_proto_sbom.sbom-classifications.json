@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "direct": [
+      {
+        "label": "@@protobuf+//bazel/flags:experimental_proto_descriptor_sets_include_source_info",
+        "metadata_file": "bazel-out/fastbuild-noconfig/bin/external/protobuf+/license.package-metadata.json"
+      }
+    ],
+    "transitive": []
+  }
+}

@@ -1,0 +1,1 @@
+{"$schema":"http://cyclonedx.org/schema/bom-1.6.schema.json","bomFormat":"CycloneDX","specVersion":"1.6","version":1,"metadata":{"tools":{"components":[{"type":"application","name":"Bazel Supply Chain Tools CycloneDX generator"}]}},"components":[{"bom-ref":"pkg:bazel/protobuf@37.0-rc1","type":"library","name":"protobuf","version":"37.0-rc1","purl":"pkg:bazel/protobuf@37.0-rc1"}]}

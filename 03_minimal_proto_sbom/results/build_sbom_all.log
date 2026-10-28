@@ -1,0 +1,15 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 18 targets (0 packages loaded, 0 targets configured)
+Analyzing: 18 targets (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed 18 targets (0 packages loaded, 0 targets configured).
+[17 / 75] GoToolchainBinaryBuild external/rules_go++go_sdk+go_default_sdk/builder [for tool]; 1s processwrapper-sandbox
+[18 / 75] [Prepa] Creating symlink external/rules_go++go_sdk+go_default_sdk/pack_reset/pack.exe [for tool]
+[20 / 75] GoStdlib external/rules_go+/stdlib_/pkg [for tool]; 1s processwrapper-sandbox
+[21 / 75] [Prepa] GoCompilePkg external/gazelle++go_deps+com_github_anchore_go_struct_converter/go-struct-converter.a [for tool]
+INFO: Found 18 targets...
+INFO: Elapsed time: 14.743s, Critical Path: 14.32s
+INFO: 75 processes: 22 internal, 53 processwrapper-sandbox.
+INFO: Build completed successfully, 75 total actions

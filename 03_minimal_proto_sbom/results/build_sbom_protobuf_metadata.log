@@ -1,0 +1,34 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 18 targets (3 packages loaded, 2 targets configured)
+Analyzing: 18 targets (3 packages loaded, 2 targets configured)
+
+DEBUG: /tmp/proto_investigation_ob/03_minimal_proto_sbom-1793205414/external/rules_python+/python/private/py_executable.bzl:1595:14: 
+======================================================================
+WARNING: Target @@bazel_tools//tools/jdk:proguard_allowlister is using implicit __init__.py creation.
+  This diabolic behavior is deprecated and will be disabled by default in a
+  future release.
+  See https://github.com/bazel-contrib/rules_python/issues/2945
+
+  Ensure all __init__.py files are explicitly created and
+  added to the srcs or deps of your targets.
+
+  Disable implicit creation for your module in MODULE.bazel:
+
+    rules_python_config = use_extension("@rules_python//python/extensions:config.bzl", "config")
+    rules_python_config.explicit_init_py(default = True)
+
+  Or for a specific target by setting:
+
+    legacy_create_init = 0
+
+  Or globally with the following Bazel flag:
+
+    --incompatible_default_to_explicit_init_py
+======================================================================
+INFO: Analyzed 18 targets (179 packages loaded, 15876 targets configured, 568 aspect applications).
+INFO: Found 18 targets...
+INFO: Elapsed time: 0.670s, Critical Path: 0.04s
+INFO: 27 processes: 50 action cache hit, 9 internal, 18 processwrapper-sandbox.
+INFO: Build completed successfully, 27 total actions

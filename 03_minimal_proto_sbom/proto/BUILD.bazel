@@ -1,0 +1,42 @@
+load("@protobuf//bazel:cc_proto_library.bzl", "cc_proto_library")
+load("@protobuf//bazel:java_proto_library.bzl", "java_proto_library")
+load("@protobuf//bazel:proto_library.bzl", "proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_java//java:java_binary.bzl", "java_binary")
+
+# Visible to the SBOM targets in //sbom.
+package(default_visibility = ["//visibility:public"])
+
+proto_library(
+    name = "greeting_proto",
+    srcs = ["greeting.proto"],
+)
+
+cc_proto_library(
+    name = "greeting_cc_proto",
+    deps = [":greeting_proto"],
+)
+
+java_proto_library(
+    name = "greeting_java_proto",
+    deps = [":greeting_proto"],
+)
+
+py_proto_library(
+    name = "greeting_py_proto",
+    deps = [":greeting_proto"],
+)
+
+cc_binary(
+    name = "greeting_cc_bin",
+    srcs = ["main.cc"],
+    deps = [":greeting_cc_proto"],
+)
+
+java_binary(
+    name = "greeting_java_bin",
+    srcs = ["com/example/greeting/Main.java"],
+    main_class = "com.example.greeting.Main",
+    deps = [":greeting_java_proto"],
+)

@@ -1,0 +1,6 @@
+@@//proto:greeting_proto
+@@protobuf+//bazel/flags:experimental_proto_descriptor_sets_include_source_info
+@@protobuf+//bazel/flags:protocopt
+@@protobuf+//bazel/flags:strict_proto_deps
+@@protobuf+//bazel/flags:strict_public_imports
+@@protobuf+//bazel/private/oss/toolchains/prebuilt:authenticity_validation

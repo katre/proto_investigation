@@ -1,0 +1,11 @@
+Computing main repo mapping: 
+Loading: 
+Loading: 0 packages loaded
+Analyzing: 6 targets (0 packages loaded, 0 targets configured)
+Analyzing: 6 targets (0 packages loaded, 0 targets configured)
+
+INFO: Analyzed 6 targets (0 packages loaded, 0 targets configured, 565 aspect applications).
+INFO: Found 6 targets...
+INFO: Elapsed time: 0.185s, Critical Path: 0.00s
+INFO: 7 processes: 7 internal.
+INFO: Build completed successfully, 7 total actions

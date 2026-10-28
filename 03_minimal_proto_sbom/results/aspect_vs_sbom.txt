@@ -1,0 +1,6 @@
+greeting_proto: aspect output == sbom graph.json
+greeting_cc_proto: aspect output == sbom graph.json
+greeting_java_proto: aspect output == sbom graph.json
+greeting_py_proto: aspect output == sbom graph.json
+greeting_cc_bin: aspect output == sbom graph.json
+greeting_java_bin: aspect output == sbom graph.json
