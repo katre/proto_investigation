@@ -126,51 +126,8 @@ python3 "$TOOLS/module_list.py" "$R/mod_graph_grpc_java_1.84.0.json" > "$R/modul
 #       Central instead of the //compiler:grpc_java_plugin cc_binary.
 GA="${OUTPUT_BASE}-grpc-java-toolchain-protoc"
 GB="${OUTPUT_BASE}-grpc-java-prebuilt-plugin"
-rm -rf "$GA" "$GB"
-cp -rL "${OUTPUT_BASE_DIR}/external/grpc-java+" "$GA"; chmod -R u+w "$GA"
-python3 - "$GA/java_grpc_library.bzl" <<'PY'
-import sys
-p = sys.argv[1]
-s = open(p).read()
-for old, new in [
-    ('default = Label("@com_google_protobuf//:protoc"),', 'default = None,'),
-    ('executable = toolchain.protoc[DefaultInfo].files_to_run,',
-     'executable = ctx.toolchains["@com_google_protobuf//bazel/private:proto_toolchain_type"].proto.proto_compiler,'),
-    ('toolchains = ["@bazel_tools//tools/jdk:toolchain_type"],',
-     'toolchains = ["@bazel_tools//tools/jdk:toolchain_type", "@com_google_protobuf//bazel/private:proto_toolchain_type"],'),
-]:
-    assert old in s, old
-    s = s.replace(old, new)
-open(p, "w").write(s)
-PY
-cp -r "$GA" "$GB"
-PLUGIN_URL=https://repo1.maven.org/maven2/io/grpc/protoc-gen-grpc-java/1.71.0/protoc-gen-grpc-java-1.71.0-linux-x86_64.exe
-curl -sSfL -o "$GB/compiler/protoc-gen-grpc-java.exe" "$PLUGIN_URL"
-echo "965a390dc243619c4fc7d69047d6fd7193466d0f  $GB/compiler/protoc-gen-grpc-java.exe" | sha1sum -c --quiet
-chmod +x "$GB/compiler/protoc-gen-grpc-java.exe"
-# The plugin attr takes only executable rules, so wrap the file in one.
-cat > "$GB/compiler/prebuilt.bzl" <<'BZL'
-def _prebuilt_exe_impl(ctx):
-    out = ctx.actions.declare_file(ctx.label.name)
-    ctx.actions.symlink(output = out, target_file = ctx.file.src, is_executable = True)
-    return [DefaultInfo(executable = out, files = depset([out]))]
-
-prebuilt_exe = rule(
-    implementation = _prebuilt_exe_impl,
-    attrs = {"src": attr.label(allow_single_file = True)},
-    executable = True,
-)
-BZL
-sed -i 's|plugin = "//compiler:grpc_java_plugin",|plugin = "//compiler:prebuilt_grpc_java_plugin",|' "$GB/compiler/BUILD.bazel"
-cat >> "$GB/compiler/BUILD.bazel" <<'BZL'
-
-load(":prebuilt.bzl", "prebuilt_exe")
-
-prebuilt_exe(
-    name = "prebuilt_grpc_java_plugin",
-    src = "protoc-gen-grpc-java.exe",
-)
-BZL
+"$TOOLS/patch_grpc_java.sh" "${OUTPUT_BASE_DIR}/external/grpc-java+" "$GA" "$GB" \
+  1.71.0 965a390dc243619c4fc7d69047d6fd7193466d0f
 for t in greeter_java_grpc greeter_java_bin; do
   aquery "${t}_toolchain_protoc" "$t" "--override_module=protobuf=${PATCHED}" "--override_module=grpc-java=${GA}"
   aquery "${t}_prebuilt_plugin" "$t" "--override_module=protobuf=${PATCHED}" "--override_module=grpc-java=${GB}"
