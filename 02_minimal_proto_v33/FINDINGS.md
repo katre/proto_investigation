@@ -1,15 +1,15 @@
 # 02_minimal_proto_v33: findings
 
-Same project as 01, but with protobuf **33.4**, the version `bazel_tools`
-already depends on, so the module graph is identical to the 00 baseline
-(`results/modules_diff_vs_baseline.txt` is empty). In 33.4,
+Same project as [01](../01_minimal_proto_v37/FINDINGS.md), but with protobuf **33.4**, the version `bazel_tools`
+already depends on, so the module graph is identical to the [00 baseline](../00_empty_baseline/FINDINGS.md#module-graph)
+([`results/modules_diff_vs_baseline.txt`](results/modules_diff_vs_baseline.txt) is empty). In 33.4,
 `@protobuf//bazel/toolchains:prefer_prebuilt_protoc` defaults to **false**.
 
 ## 1. Prebuilt protoc works, but only when opted in
 
-`bazel/private/native.bzl` in 33.4 is `native_proto_common = proto_common_do_not_use`
-(`results/native_bzl.txt`), so proto toolchain resolution is enabled and the
-01 regression doesn't apply.
+[`bazel/private/native.bzl`](https://github.com/protocolbuffers/protobuf/blob/v33.4/bazel/private/native.bzl) in 33.4 is `native_proto_common = proto_common_do_not_use`
+([`results/native_bzl.txt`](results/native_bzl.txt)), so proto toolchain resolution is enabled and the
+[01 regression](../01_minimal_proto_v37/FINDINGS.md#1-prebuilt-protoc-is-never-used-protobuf-370-rc1-regression) doesn't apply.
 
 | target | default (prebuilt off) | `--@protobuf//bazel/toolchains:prefer_prebuilt_protoc=true` |
 |---|---|---|
@@ -26,7 +26,7 @@ built-in protobuf) builds protoc from source for every proto.
 With the prebuilt flag on, C++ generation runs the prebuilt `protoc` with
 `--plugin=protoc-gen-cpp=…/src/google/protobuf/compiler/cpp/protoc-gen-cpp`, and
 that plugin is compiled from source (1125 exec-config actions: protobuf 374,
-abseil 713, zlib 35). This is the same behavior as 01 §2. The C++ runtime (about
+abseil 713, zlib 35). This is the same behavior as [01 §2](../01_minimal_proto_v37/FINDINGS.md#2-c-still-builds-protobuf-from-source-even-with-the-fix). The C++ runtime (about
 750 target-config actions) is unavoidable.
 
 ## 3. Module graph and fetches
@@ -34,13 +34,13 @@ abseil 713, zlib 35). This is the same behavior as 01 §2. The C++ runtime (abou
 - `rules_kotlin@1.9.6` comes from protobuf (directly and through
   `rules_jvm_external`). `rules_rust` is **not** in the graph (dev-only in 33.4).
 - Analyzing just `proto_library` fetches **71 repos**
-  (`results/fetched_after_proto_library_cquery.txt`) versus 85 with 37.0-rc1.
+  ([`results/fetched_after_proto_library_cquery.txt`](results/fetched_after_proto_library_cquery.txt)) versus 85 with 37.0-rc1.
   16 repos are fetched only with 37.0-rc1: `rules_rust+` and its toolchains,
   `rules_go+` and two Go SDK repos, `rules_android+` and the Android SDK repo,
   `bazel_lib+` and six toolchain repos, `toml.bzl+` and `proto_bazel_features`.
   2 are fetched only with 33.4: `rules_swift+` and its local config. Every new non-dev dependency that
   registers toolchains adds downloads for *every* protobuf user.
 - `rules_kotlin+` (25 MB) and `protobuf+` (53 MB) are fetched in both versions.
-- As in 01, `java_proto_library` adds the remote JDKs, Java tools,
+- As in [01](../01_minimal_proto_v37/FINDINGS.md#5-what-is-actually-fetched), `java_proto_library` adds the remote JDKs, Java tools,
   `rules_jvm_external+` and the hermetic Python interpreter used by the Java
   toolchain's `proguard_allowlister`.

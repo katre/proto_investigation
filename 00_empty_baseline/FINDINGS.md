@@ -3,13 +3,13 @@
 A project with an empty `module()`, a `filegroup` (`//:hello`) and a
 `cc_library` (`//cc:answer`). The only `bazel_dep` is `rules_cc@0.2.17`, which is
 needed to load `cc_library`. That's the same version `bazel_tools` already
-requires, so the module graph is unchanged. Bazel 9.3.0 (see `results/env.txt`).
+requires, so the module graph is unchanged. Bazel 9.3.0 (see [`results/env.txt`](results/env.txt)).
 
 ## Module graph
 
 - `bazel mod graph` only shows `<root>`, because builtin modules are hidden by default.
 - `bazel mod graph --include_builtin` shows **27 modules besides `bazel_tools`**
-  (`results/modules.txt`), all coming from Bazel's own `MODULE.tools`:
+  ([`results/modules.txt`](results/modules.txt)), all coming from Bazel's own [`MODULE.tools`](https://github.com/bazelbuild/bazel/blob/9.3.0/src/MODULE.tools):
 
   ```
   abseil-cpp@20250814.1 apple_support@2.5.2 bazel_features@1.42.1 bazel_skylib@1.8.2
@@ -24,7 +24,7 @@ requires, so the module graph is unchanged. Bazel 9.3.0 (see `results/env.txt`).
 - **`rules_kotlin` is in every Bazel 9.3.0 project's module graph**, even with no
   protobuf usage. It comes from `bazel_tools`, which depends on protobuf 33.4 (to
   autoload the removed native proto rules); `rules_jvm_external` also requires it
-  (`results/mod_explain.txt`):
+  ([`results/mod_explain.txt`](results/mod_explain.txt)):
 
   ```
   <root> (empty_baseline@_)
@@ -44,10 +44,10 @@ requires, so the module graph is unchanged. Bazel 9.3.0 (see `results/env.txt`).
 
 - **No toolchains** (`bazel build --nobuild //:hello`, a `filegroup`): only `platforms`,
   `bazel_features`, `bazel_skylib` and the `rules_cc` load-time repos are fetched
-  (`results/fetched_after_analysis_filegroup.txt`). A module being in the graph
+  ([`results/fetched_after_analysis_filegroup.txt`](results/fetched_after_analysis_filegroup.txt)). A module being in the graph
   does **not**, by itself, cause a download.
 - **Any toolchain resolution** (`bazel build --nobuild //cc:answer`, one
-  `cc_library`) fetches **68 repos** (`results/fetched_after_analysis_cc_library.txt`),
+  `cc_library`) fetches **68 repos** ([`results/fetched_after_analysis_cc_library.txt`](results/fetched_after_analysis_cc_library.txt)),
   including:
 
   | repo | size (KiB) |
@@ -58,8 +58,8 @@ requires, so the module graph is unchanged. Bazel 9.3.0 (see `results/env.txt`).
   | `rules_swift+` | 3072 |
   | `apple_support+` | 1076 |
 
-  (`results/fetched_sizes_kib.txt`; `local_jdk` and `local_config_*` are local and
-  excluded.) The toolchain resolution debug output (`results/toolchain_resolution_cc.txt`)
+  ([`results/fetched_sizes_kib.txt`](results/fetched_sizes_kib.txt); `local_jdk` and `local_config_*` are local and
+  excluded.) The toolchain resolution debug output ([`results/toolchain_resolution_cc.txt`](results/toolchain_resolution_cc.txt))
   only considers C++ toolchains. The fetches come from Bazel computing the set of
   *registered* toolchains: it has to load the package of every
   `register_toolchains()` target from every module in the graph to find its
@@ -71,7 +71,7 @@ requires, so the module graph is unchanged. Bazel 9.3.0 (see `results/env.txt`).
 - **Running `bazel mod graph` / `mod explain` also fetches 22 module and
   extension repos**, including `protobuf+`, `rules_kotlin+`, `rules_jvm_external+`,
   `rules_swift+`, `rules_apple+` and `googletest+`
-  (`results/fetched_by_mod_commands.txt`). The `mod` commands appear to evaluate
+  ([`results/fetched_by_mod_commands.txt`](results/fetched_by_mod_commands.txt)). The `mod` commands appear to evaluate
   module extensions (e.g. `bazel_features++version_extension+*` and
   `rules_python++python+pythons_hub` were created), which requires fetching the
   modules that define them.
@@ -80,6 +80,6 @@ requires, so the module graph is unchanged. Bazel 9.3.0 (see `results/env.txt`).
 
 - `bazel clean --expunge` hangs in this environment (the old server becomes a
   zombie process that is never reaped), so every run uses a fresh
-  `--output_base` instead (`tools/common.sh`). `bazel mod` commands run in a
+  `--output_base` instead ([`tools/common.sh`](../tools/common.sh)). `bazel mod` commands run in a
   second output base so they don't affect the "fetched" lists.
-- `--nohome_rc --nosystem_rc` is used so only the case's `.bazelrc` applies.
+- `--nohome_rc --nosystem_rc` is used so only the case's [`.bazelrc`](.bazelrc) applies.

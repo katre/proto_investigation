@@ -1,31 +1,31 @@
 # Protobuf Rules Investigation: Results
 
-These are the answers to the questions in `investigation.md`. All runs use
+These are the answers to the questions in [`investigation.md`](investigation.md). All runs use
 Bazel 9.3.0 and are analysis only (`mod`/`query`/`cquery`/`aquery`). The one
 exception is the SBOM targets in 03. Each case has a `run.sh` and a
 `FINDINGS.md` with the details. The cases are:
 
-- `00_empty_baseline`
-- `01_minimal_proto_v37` (protobuf 37.0-rc1)
-- `02_minimal_proto_v33` (protobuf 33.4)
-- `03_minimal_proto_sbom`
-- `04_grpc_java_minimal`
-- `05_bazel_build`
+- [`00_empty_baseline`](00_empty_baseline/FINDINGS.md)
+- [`01_minimal_proto_v37`](01_minimal_proto_v37/FINDINGS.md) (protobuf 37.0-rc1)
+- [`02_minimal_proto_v33`](02_minimal_proto_v33/FINDINGS.md) (protobuf 33.4)
+- [`03_minimal_proto_sbom`](03_minimal_proto_sbom/FINDINGS.md)
+- [`04_grpc_java_minimal`](04_grpc_java_minimal/FINDINGS.md)
+- [`05_bazel_build`](05_bazel_build/FINDINGS.md)
 
 ## 1. Too many module dependencies
 
 **Every Bazel 9.3.0 project already depends on protobuf, so it gets
-`rules_kotlin` too.** `bazel_tools` (`MODULE.tools`) has `bazel_dep(protobuf, 33.4)`
+`rules_kotlin` too.** `bazel_tools` ([`MODULE.tools`](https://github.com/bazelbuild/bazel/blob/9.3.0/src/MODULE.tools)) has `bazel_dep(protobuf, 33.4)`
 to autoload the old native proto rules. With `--include_builtin`, an empty
 project has 28 modules, including protobuf 33.4, rules_kotlin 1.9.6,
 rules_jvm_external, rules_python, rules_java, rules_apple, rules_swift and
-rules_android (00).
+rules_android ([00](00_empty_baseline/FINDINGS.md#module-graph)).
 
 - **The answer to "why do I depend on rules_kotlin?":** protobuf (both 33.4
   and 37.0-rc1) has a non-dev dep on it, and so does rules_jvm_external, which
   protobuf also depends on. The user doesn't have to use protobuf at all, since
   `bazel_tools` brings it in.
-- **protobuf 37.0-rc1 makes it worse.** It goes to 33 modules (01). It adds
+- **protobuf 37.0-rc1 makes it worse.** It goes to 33 modules ([01](01_minimal_proto_v37/FINDINGS.md#4-module-graph)). It adds
   `rules_rust` (now non-dev), `rules_go`, `gazelle`, `bazel_lib`, `toml.bzl`,
   `rules_robolectric`, `package_metadata` and `abseil-py`. It also upgrades
   rules_kotlin to 2.3.20, rules_python to 2.3.0 and rules_android to 0.7.1.
@@ -34,17 +34,17 @@ rules_android (00).
   `register_toolchains()` target in the graph, which means fetching every
   module that registers one, whatever toolchain type is being resolved.
   - For a single `cc_library` in an empty project, Bazel fetches 68 repos,
-    including protobuf (53 MB) and rules_kotlin (25 MB) (00).
-  - For a `proto_library`, it fetches 71 repos with protobuf 33.4 (02) and
-    85 with 37.0-rc1 (01). The extra 37.0-rc1 repos include rules_rust plus
+    including protobuf (53 MB) and rules_kotlin (25 MB) ([00](00_empty_baseline/FINDINGS.md#what-is-actually-fetched)).
+  - For a `proto_library`, it fetches 71 repos with protobuf 33.4 ([02](02_minimal_proto_v33/FINDINGS.md#3-module-graph-and-fetches)) and
+    85 with 37.0-rc1 ([01](01_minimal_proto_v37/FINDINGS.md#5-what-is-actually-fetched)). The extra 37.0-rc1 repos include rules_rust plus
     its toolchains, rules_go plus the Go SDK, rules_android plus the Android
     SDK repo, and bazel_lib toolchains.
 - **grpc-java 1.71.0 (the version Bazel uses) adds 27 more modules** (60 in
   total). They include grpc C++, envoy_api, xds, opentelemetry, prometheus,
   boringssl and curl. None of their targets are analyzed for a Java-only user.
-  grpc-java 1.84.0 has 38 modules (04).
+  grpc-java 1.84.0 has 38 modules ([04](04_grpc_java_minimal/FINDINGS.md#4-module-graph-grpc-java-1710-brings-in-grpc-c-and-its-world)).
 
-### SBOMs (03)
+### SBOMs ([03](03_minimal_proto_sbom/FINDINGS.md))
 
 **The theory is wrong. The module-graph deps don't appear in supply-chain
 SBOMs. The real problem is the reverse: the SBOMs are missing things.**
@@ -70,7 +70,7 @@ SBOMs. The real problem is the reverse: the SBOMs are missing things.**
 
 ## 2. Too much time building protobuf
 
-### Minimal project (01, 02, 04)
+### Minimal project ([01](01_minimal_proto_v37/FINDINGS.md), [02](02_minimal_proto_v33/FINDINGS.md), [04](04_grpc_java_minimal/FINDINGS.md))
 
 | | protobuf 33.4 (Bazel's built-in) | protobuf 37.0-rc1 |
 |---|---|---|
@@ -83,26 +83,26 @@ SBOMs. The real problem is the reverse: the SBOMs are missing things.**
 Findings:
 
 1. **protobuf 37.0-rc1 regression: the prebuilt protoc is never used on Bazel 9.**
-   - `bazel/private/native.bzl` reads `getattr(native, "proto_common", None)`.
+   - [`bazel/private/native.bzl`](https://github.com/protocolbuffers/protobuf/blob/v37.0-rc1/bazel/private/native.bzl) reads `getattr(native, "proto_common", None)`.
      That is `None` on Bazel 9, so protobuf thinks proto toolchain resolution is
      off and uses the source-built `protoc_minimal`/`protoc`.
-   - It came in with protobuf commit `f1c23cb` and is still on `main`.
+   - It came in with protobuf commit [`f1c23cb`](https://github.com/protocolbuffers/protobuf/commit/f1c23cb216347437d0a190a23b9ecf46873db367) and is still on `main`.
    - Restoring `native_proto_common = proto_common_do_not_use` fixes it:
-     `proto_library` goes from 1143 actions to 2 (01 §1).
+     `proto_library` goes from 1143 actions to 2 ([01 §1](01_minimal_proto_v37/FINDINGS.md#1-prebuilt-protoc-is-never-used-protobuf-370-rc1-regression)).
 2. **protobuf 33.4 needs an explicit opt-in.** Anyone relying on the protobuf
    built into Bazel 9.3.0 builds protoc from source unless they set
-   `--@protobuf//bazel/toolchains:prefer_prebuilt_protoc=true` (02).
+   `--@protobuf//bazel/toolchains:prefer_prebuilt_protoc=true` ([02 §1](02_minimal_proto_v33/FINDINGS.md#1-prebuilt-protoc-works-but-only-when-opted-in)).
 3. **C++ always builds libprotoc.** The C++ `proto_lang_toolchain` runs the
    prebuilt protoc with `--plugin=protoc-gen-cpp`, and that plugin is a
    source-built `cc_binary` that links libprotoc: about 1100–1200 exec-config
-   actions. The prebuilt protoc already contains the C++ generator (01 §2, 02 §2).
+   actions. The prebuilt protoc already contains the C++ generator ([01 §2](01_minimal_proto_v37/FINDINGS.md#2-c-still-builds-protobuf-from-source-even-with-the-fix), [02 §2](02_minimal_proto_v33/FINDINGS.md#2-c-plugin-built-from-source-as-in-01)).
 4. **Runtimes (hypothesis 1).**
    - The C++ runtime (protobuf + abseil + zlib, about 750–800 actions) is
      always built from source because there is no prebuilt runtime.
    - The Java runtime (`java/core`) is also built from source, but it's
      cheap: 2 Javac + 2 Turbine actions.
    - The Python runtime is source files only.
-5. **gRPC-Java (hypothesis 2): confirmed for a Java project (04).** With the
+5. **gRPC-Java (hypothesis 2): confirmed for a Java project ([04](04_grpc_java_minimal/FINDINGS.md)).** With the
    prebuilt protoc in effect, `java_proto_library` needs 74 actions. Adding one
    `java_grpc_library` brings it back up to **2406**, including 1174
    CppCompile actions. Both tools in grpc-java's `java_rpc_toolchain` are built
@@ -115,7 +115,7 @@ Findings:
    Maven-published prebuilt `protoc-gen-grpc-java` as well brings it down to
    **170 actions with no CppCompile**. grpc-java 1.84.0 behaves the same.
 
-### Bazel's own build (05)
+### Bazel's own build ([05](05_bazel_build/FINDINGS.md))
 
 `//src:bazel_nojdk` has 9895 actions. With the defaults, every protoc is built
 from source.
@@ -136,7 +136,7 @@ from source.
   adds about 1220 more target-config CppCompile actions (grpc, abseil,
   protobuf, c-ares, re2). There is no prebuilt alternative for these.
 - **Bazel can't use the prebuilt protoc as things stand anyway.**
-  `third_party/protobuf.patch` modifies protoc's Java generator
+  [`third_party/protobuf.patch`](https://github.com/bazelbuild/bazel/blob/9.3.0/third_party/protobuf.patch) modifies protoc's Java generator
   (`compiler/java/full/message.cc`, the `transient memoizedIsInitialized`
   change). A prebuilt protoc would silently drop that change.
 
@@ -144,7 +144,7 @@ from source.
 
 | problem | fix | owner |
 |---|---|---|
-| 37.0-rc1 never uses the prebuilt protoc on Bazel 9 | fix `native.bzl` (fall back to `proto_common_do_not_use`) before 37.0 final | protobuf |
+| 37.0-rc1 never uses the prebuilt protoc on Bazel 9 | fix [`native.bzl`](https://github.com/protocolbuffers/protobuf/blob/v37.0-rc1/bazel/private/native.bzl) (fall back to `proto_common_do_not_use`) before 37.0 final | protobuf |
 | Bazel 9's built-in protobuf 33.4 defaults the prebuilt protoc off | bump `bazel_tools` to a protobuf whose prebuilt default works | Bazel |
 | `cc_proto_library` always builds `protoc-gen-cpp` | use the prebuilt protoc's built-in `--cpp_out` when the prebuilt protoc is selected | protobuf |
 | `java_grpc_library` / `cc_grpc_library` hard-code protoc and build their plugins from source | use the proto toolchain's protoc; offer prebuilt plugins (grpc-java already publishes them on Maven Central) | grpc-java, grpc |
