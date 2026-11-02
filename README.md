@@ -1,5 +1,7 @@
 # Protobuf Rules Investigation
 
+(View the [doc](https://docs.google.com/document/d/1HzIgia4l4KovD_WfWSHfTH06HGAIL-V5XI-hzG6r9Hs/edit?usp=sharing) to add comments.)
+
 This repository investigates two problems the community has reported with the
 [protobuf](https://github.com/protocolbuffers/protobuf) Bazel rules. The full
 question is in [`investigation.md`](investigation.md), the test plan is in
